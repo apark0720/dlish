@@ -53,7 +53,6 @@ class SessionForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          Welcome to BenchBnB!
           <br/>
           Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}
@@ -69,7 +68,7 @@ class SessionForm extends React.Component {
             <label>Password:
               <input type="password"
                 value={this.state.password}
-                onChange={this.update('password')}          
+                onChange={this.update('password')}
               />
             </label>
             <br/>
