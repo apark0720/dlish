@@ -9,10 +9,8 @@
 
 ## Minimum Viable Product
 
-dlish is a web application inspired by lishfood.com built using Ruby on Rails
-and React/Redux.  By the end of Week 9, this app will, at a minimum, satisfy the
-following criteria with smooth, bug-free navigation, adequate seed data and
-sufficient CSS styling:
+dlish is a web application inspired by lishfood.com and massdrop built on a Rails backend
+and React/Redux. dlish will contain the following MVP features:
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
@@ -47,7 +45,7 @@ sufficient CSS styling:
 
 ### Phase 3: Joining orders (1.5 days)
 
-**Objective:** Integrate google maps api
+**Objective:** Users can join existing orders.
 
 ### Phase 4: Filter (1.5 days)
 
