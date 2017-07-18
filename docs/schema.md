@@ -25,7 +25,7 @@ url                | string    | not null
 main_image_url     | string    | not null
 price              | integer   | not null
 lowest_price       | integer   | not null
-lowest_price_order_amount | integer   | not null
+lowest_price_threshold | integer   | not null
 end_date           | integer   | not null
 pickup_time        | string    | not null
 location           | text      | not null
