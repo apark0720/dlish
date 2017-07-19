@@ -34,7 +34,6 @@ class NavBar extends React.Component {
           <li><Link to="/" className="nav-logo"></Link></li>
           <li><Link to="/" >Menu</Link></li>
           <li><Link to="/" >How it Works</Link></li>
-          <li><Link to="/" className="nav-logo"></Link></li>
         </ul>
       </nav>
     );
