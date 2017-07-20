@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 
 import NavBarContainer from './header/nav_bar/nav_bar_container';
-import SessionFormContainer from './header/session_form/session_form_container';
 import ModalStructure from './header/modal/modal_structure';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -20,11 +19,10 @@ const App = () => (
       </Link>
       <NavBarContainer />
     </header>
-    <ModalContainer />
+    <ModalStructure />
 
     <Switch>
-      <AuthRoute path="/login" component={SessionFormContainer} />
-      <AuthRoute path="/signup" component={SessionFormContainer} />
+
     </Switch>
   </div>
 );

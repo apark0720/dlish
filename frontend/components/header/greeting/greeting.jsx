@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { openModal } from '../../../actions/modal_actions';
-import LoginFormContainer from '../login_form/login_form_container';
+import LoginFormContainer from '../session_form/login_form_container';
 // import SignupFormContainer from '../signup_form_container';
 import UserDropdownContainer from '../user_dropdown/user_dropdown_container';
 
@@ -32,7 +32,6 @@ class Greeting extends React.Component {
 
     const sessionLinks = () => (
       <nav className="login-navbar">
-        <button onClick={this.props.showSignup}>Sign Up</button>
         <button onClick={this.props.showLogin}>Log In</button>
       </nav>
     );
@@ -53,7 +52,6 @@ class Greeting extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  showSignup: () => dispatch(openModal(<SignupFormContainer formType={'signup'}/>)),
   showLogin: () => dispatch(openModal(<LoginFormContainer formType={'login'}/>))
 })
 
