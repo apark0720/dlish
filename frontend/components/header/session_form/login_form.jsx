@@ -6,7 +6,7 @@ class SignUpForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: '',
+      password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
@@ -27,14 +27,15 @@ class SignUpForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const account = this.state;
-    this.props.processForm({account});
+    console.log(this.props.processForm);
+    this.props.processForm(account);
     // this.props.history.push('/');
   }
 
   demoLogin() {
     this.props.login({ account: {
-      username: "yaakovbeiss",
-      password: "password"
+      username: "alex",
+      password: "123456"
     }});
     this.props.history.push('/');
   }
@@ -53,6 +54,7 @@ class SignUpForm extends React.Component {
 
 
   render() {
+    console.log(typeof this.props.processForm);
 
     return (
       <div>
@@ -63,7 +65,7 @@ class SignUpForm extends React.Component {
 
             <div className="login-form">
               <br/>
-                <label className="sign-in-text-input">
+                <label className="log-in-text-input">
                   <input type="text"
                     placeholder="Username"
                     value={this.state.username}
@@ -84,31 +86,22 @@ class SignUpForm extends React.Component {
                 </label>
                 <br/>
 
-
-                <div className="log-in-buttons">
-                  <input className="submit-button" type="submit" value="Log In" />
-                </div>
-  
+                  <input type="submit" className="submit-button" value="Log In" />
               </div>
+            </form>
 
-
-
-
-              <div className="social-box">
-
+            <div className="social-box">
             <br/>
-                <a className="linkedin logo" href="https://www.linkedin.com" target="_blank">
-                  <img src={window.images.linkedin_icon} className="linkedin-icon" />
-                </a>
+              <a className="linkedin logo" href="https://www.linkedin.com" target="_blank">
+                <img src={window.images.linkedin_icon} className="linkedin-icon" />
+              </a>
               <a className="github logo" href="https://github.com" target="_blank">
                 <img src={window.images.github_icon} className="github-icon"  />
               </a>
               <a className="resume logo" href="http://www.google.com" target="_blank">
                 <img src={window.images.resume_icon} className="resume-icon" />
               </a>
-
-              </div>
-          </form>
+            </div>
         </div>
       </div>
     );

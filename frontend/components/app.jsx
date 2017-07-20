@@ -15,8 +15,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <Link to="/">
-      </Link>
+      <Link to="/" />
       <NavBarContainer />
     </header>
     <ModalStructure />
