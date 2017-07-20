@@ -1,9 +1,9 @@
-import React from 'react';
 import { connect } from 'react-redux';
+
 import { login, logout, signup } from '../../../actions/session_actions';
-import { closeModal, openModal } from '../../../actions/modal_actions';
-import LoginForm from './login_form';
-// import SignupFormContainer from './signup_form_container';
+// import { clearErrors } from '../../actions/error_actions';
+import SessionForm from './session_form';
+
 
 const mapStateToProps = ({ session }) => ({
   loggedIn: Boolean(session.currentUser),
@@ -13,8 +13,7 @@ const mapStateToProps = ({ session }) => ({
 const mapDispatchToProps = (dispatch, { formType }) => {
   const processForm = (formType === 'login') ? login : signup;
   return {
-    login: account => dispatch(login(account)),
-    processForm: user => dispatch(processForm(user)).then(() => dispatch(closeModal())),
+    processForm: user => dispatch(processForm(user)),
     formType
   };
 };
@@ -22,4 +21,4 @@ const mapDispatchToProps = (dispatch, { formType }) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(LoginForm);
+)(SessionForm);

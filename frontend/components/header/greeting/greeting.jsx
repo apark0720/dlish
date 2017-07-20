@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 
-import { openModal } from '../../../actions/modal_actions';
-import LoginFormContainer from '../session_form/login_form_container';
-// import SignupFormContainer from '../signup_form_container';
-import UserDropdownContainer from '../user_dropdown/user_dropdown_container';
+import SessionFormContainer from '../session_form/session_form_container';
+import AuthModal from '../auth_modal';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -32,7 +29,7 @@ class Greeting extends React.Component {
 
     const sessionLinks = () => (
       <nav>
-        <button className="login-button-navbar" onClick={this.props.showLogin}>Log In</button>
+        <AuthModal formType='login' />
       </nav>
     );
 
@@ -51,8 +48,4 @@ class Greeting extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  showLogin: () => dispatch(openModal(<LoginFormContainer formType={'login'}/>))
-})
-
-export default connect(null, mapDispatchToProps)(Greeting);
+export default Greeting;

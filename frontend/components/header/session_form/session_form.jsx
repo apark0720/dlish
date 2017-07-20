@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link, NavLink, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-class SignUpForm extends React.Component {
+import AuthModal from '../auth_modal';
+
+class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,11 +14,11 @@ class SignUpForm extends React.Component {
     this.demoLogin = this.demoLogin.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/');
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.loggedIn) {
+  //     this.props.history.push('/');
+  //   }
+  // }
 
   update(field) {
     return e => this.setState({
@@ -27,18 +29,21 @@ class SignUpForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const account = this.state;
-    console.log(this.props.processForm);
     this.props.processForm(account);
-    // this.props.history.push('/');
   }
 
   demoLogin() {
-    this.props.login({ account: {
-      username: "alex",
-      password: "123456"
-    }});
-    this.props.history.push('/');
-  }
+    e.preventDefault();
+       this.props.processForm({email: "bob@gmail", password: "123456"});
+     }
+
+ renderDemo() {
+   if (this.props.formType === 'login') {
+     return (
+       <button className="btn demo-btn" onClick={this.handleDemoClick}>Demo Account</button>
+     );
+   }
+ }
 
   renderErrors() {
     return(
@@ -52,9 +57,10 @@ class SignUpForm extends React.Component {
     );
   }
 
-
   render() {
-    console.log(typeof this.props.processForm);
+    const renderMessage = (
+        this.props.formType === 'login' ? 'Log In' : 'Sign Up for dlish'
+      );
 
     return (
       <div>
@@ -108,4 +114,4 @@ class SignUpForm extends React.Component {
   }
 }
 
-export default withRouter(SignUpForm);
+export default withRouter(SessionForm);

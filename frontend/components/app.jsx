@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 
 import NavBarContainer from './header/nav_bar/nav_bar_container';
-import ModalStructure from './header/modal/modal_structure';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -18,7 +17,6 @@ const App = () => (
       <Link to="/" />
       <NavBarContainer />
     </header>
-    <ModalStructure />
 
     <Switch>
 
