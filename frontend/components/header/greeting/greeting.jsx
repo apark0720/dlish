@@ -31,8 +31,8 @@ class Greeting extends React.Component {
     const { currentUser, logout } = this.props;
 
     const sessionLinks = () => (
-      <nav className="login-navbar">
-        <button onClick={this.props.showLogin}>Log In</button>
+      <nav className="login-button-navbar">
+        <button className="" onClick={this.props.showLogin}>Log In</button>
       </nav>
     );
 

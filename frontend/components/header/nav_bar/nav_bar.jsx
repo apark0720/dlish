@@ -13,7 +13,7 @@ class NavBar extends React.Component {
     this.props.logout();
   }
 
-  renderAuthLink() {
+  authLinks() {
     if (this.props.loggedIn) {
       return (
         <ul className="nav-logout">
@@ -37,7 +37,7 @@ class NavBar extends React.Component {
           <li><Link to="/" >Menu</Link></li>
           <li><Link to="/" >How it Works</Link></li>
         </ul>
-        { this.renderAuthLink() }
+        { this.authLinks() }
       </nav>
     );
   }

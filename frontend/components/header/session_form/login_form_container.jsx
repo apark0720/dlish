@@ -13,9 +13,9 @@ const mapStateToProps = ({ session }) => ({
 const mapDispatchToProps = (dispatch, { formType }) => {
   const processForm = (formType === 'login') ? login : signup;
   return {
+    login: account => dispatch(login(account)),
     processForm: user => dispatch(processForm(user)).then(() => dispatch(closeModal())),
     formType,
-    showSignup: () => dispatch(openModal(<SignupFormContainer formType='signup'/>)),
   };
 };
 
