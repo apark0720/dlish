@@ -8,9 +8,9 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import NavBarContainer from './header/nav_bar_container';
-import SessionFormContainer from './header/session_form_container';
-import ModalContainer from './header/modal_container';
+import NavBarContainer from './header/nav_bar/nav_bar_container';
+import SessionFormContainer from './header/session_form/session_form_container';
+import ModalStructure from './header/modal/modal_structure';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (

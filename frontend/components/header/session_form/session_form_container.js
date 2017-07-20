@@ -6,7 +6,7 @@ import {
   login,
   logout,
   signup
-} from '../../actions/session_actions';
+} from '../../../actions/session_actions';
 import SessionForm from './session_form';
 
 

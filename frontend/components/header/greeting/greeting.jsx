@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { openModal } from '../../../actions/modal_actions';
-import LoginFormContainer from '../login_form_container';
+import LoginFormContainer from '../login_form/login_form_container';
 // import SignupFormContainer from '../signup_form_container';
-import UserDropdownContainer from '../user_dropdown_container';
+import UserDropdownContainer from '../user_dropdown/user_dropdown_container';
 
 class Greeting extends React.Component {
   constructor(props) {

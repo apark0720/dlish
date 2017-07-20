@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { closeModal } from '../../../actions/modal_actions';
 
-import { closeModal } from '../../actions/modal_actions';
-
-const ModalContainer = ({ closeModal, modalIsOpen, content }) => (
+const ModalStructure = ({ closeModal, modalIsOpen, content }) => (
   <div className={ modalIsOpen ? 'modal-structure' : 'modal-structure hidden' } onClick={closeModal}>
       { content }
   </div>
@@ -18,4 +17,4 @@ const matchDispatchToProps = (dispatch) => ({
   closeModal: () => dispatch(closeModal())
 });
 
-export default connect(matchStateToProps, matchDispatchToProps)(ModalContainer);
+export default connect(matchStateToProps, matchDispatchToProps)(ModalStructure);
