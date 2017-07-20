@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GreetingContainer from './greeting/greeting_container';
+
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -11,23 +13,23 @@ class NavBar extends React.Component {
     this.props.logout();
   }
 
-  render() {
-    let authLinks;
-    if (this.props.loggedIn === false) {
-      authLinks = (
-        <ul className="nav-login-signup">
-          <li><Link to="/login">Log In</Link></li>
-          <li><Link to="/signup">Sign Up</Link></li>
-        </ul>
-      );
-    } else {
-      authLinks = (
+  renderAuthLink() {
+    if (this.props.loggedIn) {
+      return (
         <ul className="nav-logout">
           <li onClick={this.logout}><Link to="/">Log Out</Link></li>
         </ul>
       );
+    } else {
+      return (
+        <ul className="nav-login-signup">
+          <li><GreetingContainer /></li>
+        </ul>
+      );
     }
+  }
 
+  render() {
     return(
       <nav>
         <ul>
@@ -35,6 +37,7 @@ class NavBar extends React.Component {
           <li><Link to="/" >Menu</Link></li>
           <li><Link to="/" >How it Works</Link></li>
         </ul>
+        { this.renderAuthLink() }
       </nav>
     );
   }
