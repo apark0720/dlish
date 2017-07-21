@@ -57,13 +57,10 @@ class LoginModal extends React.Component {
   }
 
   render() {
-    let errorLis = this.props.errors.map((error, idx) => (
-      <li key={idx} className="error-text">{error}</li>
-    ));
     return (
       <form>
         <ul>
-          { errorLis }
+
         </ul>
         <input
           type="text"
@@ -93,4 +90,8 @@ class LoginModal extends React.Component {
   }
 }
 
+// let errorLis = this.props.errors.map((error, idx) => (
+//   <li key={idx} className="error-text">{error}</li>
+// ));
+          // { errorLis }
 export default LoginModal;

@@ -6,8 +6,8 @@ import LoginContainer from '../session_form/login_container';
 import SignupContainer from '../session_form/signup_container';
 import { hideModal } from '../../actions/modal_actions';
 
-const ModalContainer = ({ currentModal, hideModal }) => {
-  switch (currentModal) {
+const ModalContainer = ({ modal, hideModal }) => {
+  switch (modal) {
     case 'LOGIN_MODAL':
       return (
         <ModalWrapper hideModal={ hideModal } title="Log In">
@@ -25,8 +25,8 @@ const ModalContainer = ({ currentModal, hideModal }) => {
   }
 };
 
-const mapStateToProps = ({ currentModal }) => ({
-  currentModal
+const mapStateToProps = ({ modal }) => ({
+  modal
 });
 
 const mapDispatchToProps = dispatch => ({
