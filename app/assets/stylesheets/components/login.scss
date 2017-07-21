@@ -1,83 +1,83 @@
-.session-form-container {
-  box-sizing: border-box;
-  width: 100%;
-  height: 350px;
-  max-width: 550px;
-  padding: 0px 10px;
-  // background-color: $white;
-  // margin: 70px auto;
-
-  // .side-icon {
-  //   float: right;
-  //   margin-right: 15px;
-  //   margin-top: -40px;
-  //   position: relative;
-  //   z-index: 3;
-  //   color: $gray;
-  // }
-
-  h3 {
-    margin-top: 20px;
-    padding-left: 15px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-  }
-
-  .session-input {
-    box-sizing: border-box;
-    font-size: 16px;
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    // border: 1px solid $light-gray;
-    // color: $gray;
-    background-color: #faffbd;
-    border-radius: 3px;
-
-    // font-family: "FontAwesome", $font-stack;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-
-     &:focus {
-      //  box-shadow: 0 0 5px $gray;
-       border: 1px solid rgba(81, 203, 238, 1);
-     }
-  }
-}
-
-.session-form-box {
-  width: 500px;
-  text-align: left;
-  // display: block;
-  padding-top: 0px;
-  padding-right: 10px;
-  padding-left: 10px;
-  text-align: left;
-
-  .btn {
-    height: 40px;
-  }
-}
-
-.other-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  padding: 17px 12px;
-  // border-top: 1px solid $light-gray;
-
-  p {
-    font-size: 17px;
-    padding-top: 3px;
-  }
-
-  span {
-    margin-right: 10px;
-    margin-bottom: 20px;
-  }
-}
+// .session-form-container {
+//   box-sizing: border-box;
+//   width: 100%;
+//   height: 350px;
+//   max-width: 550px;
+//   padding: 0px 10px;
+//   // background-color: $white;
+//   // margin: 70px auto;
+//
+//   // .side-icon {
+//   //   float: right;
+//   //   margin-right: 15px;
+//   //   margin-top: -40px;
+//   //   position: relative;
+//   //   z-index: 3;
+//   //   color: $gray;
+//   // }
+//
+//   h3 {
+//     margin-top: 20px;
+//     padding-left: 15px;
+//     padding-bottom: 0px;
+//     margin-bottom: 0px;
+//   }
+//
+//   .session-input {
+//     box-sizing: border-box;
+//     font-size: 16px;
+//     width: 100%;
+//     padding: 10px;
+//     margin: 8px 0;
+//     // border: 1px solid $light-gray;
+//     // color: $gray;
+//     background-color: #faffbd;
+//     border-radius: 3px;
+//
+//     // font-family: "FontAwesome", $font-stack;
+//     font-style: normal;
+//     font-weight: normal;
+//     text-decoration: inherit;
+//
+//      &:focus {
+//       //  box-shadow: 0 0 5px $gray;
+//        border: 1px solid rgba(81, 203, 238, 1);
+//      }
+//   }
+// }
+//
+// .session-form-box {
+//   width: 500px;
+//   text-align: left;
+//   // display: block;
+//   padding-top: 0px;
+//   padding-right: 10px;
+//   padding-left: 10px;
+//   text-align: left;
+//
+//   .btn {
+//     height: 40px;
+//   }
+// }
+//
+// .other-link {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-top: 20px;
+//   padding: 17px 12px;
+//   // border-top: 1px solid $light-gray;
+//
+//   p {
+//     font-size: 17px;
+//     padding-top: 3px;
+//   }
+//
+//   span {
+//     margin-right: 10px;
+//     margin-bottom: 20px;
+//   }
+// }
 // .login-form-container {
 //   font-family: 'Open sans';
 //   width: 350px;

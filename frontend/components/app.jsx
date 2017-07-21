@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 
 import NavBarContainer from './header/nav_bar/nav_bar_container';
+import ModalContainer from './header/modal/modal_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -21,6 +22,7 @@ const App = () => (
     <Switch>
 
     </Switch>
+    <ModalContainer />
   </div>
 );
 
