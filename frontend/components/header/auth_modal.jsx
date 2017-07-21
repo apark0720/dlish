@@ -45,7 +45,7 @@ class AuthModal extends React.Component {
 
   displayModal(formType) {
     const modalName = (
-      formType === 'login' ? "Log In" : "Sign Up"
+      formType === 'login' ?  "Log In" : "Sign Up"
     );
 
     return (

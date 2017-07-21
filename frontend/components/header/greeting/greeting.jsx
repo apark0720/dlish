@@ -25,18 +25,18 @@ class Greeting extends React.Component {
   }
 
   render() {
-    const { currentUser, logout } = this.props;
+    const { currentUser, logout, login } = this.props;
 
     const sessionLinks = () => (
       <nav>
-        <AuthModal formType='login' />
+        <AuthModal formType={'login'} login={login} />
       </nav>
     );
 
     const personalGreeting = (currentUser, logout) => (
       <div className="login-navbar">
         <button onClick={this.toggleDropdown.bind(this)} >
-          {this.props.currentUser.first_name} {this.props.currentUser.last_name}
+          {this.props.currentUser.email}
         </button>
         {this.state.user_drop_active ? <UserDropdownContainer /> : <div className="user-dropdown-hidden"></div> }
       </div>

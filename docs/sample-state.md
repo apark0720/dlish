@@ -2,7 +2,7 @@
 {
   currentUser: {
     id: 1,
-    username: "apark0720"
+    email: "apark0720"
   },
 
   errors: {
@@ -14,15 +14,15 @@
   users: {
     1: {
       id: 1,
-      username: "apark0720"
+      email: "apark0720"
     },
     2: {
       id: 2,
-      username: "palex"
+      email: "palex"
     },
     3: {
       id: 3,
-      username: "ap2903"
+      email: "ap2903"
     }
   }
 
@@ -34,7 +34,7 @@
     },
     2: {
       id: 2,
-      username: "Chef Boyardee",
+      email: "Chef Boyardee",
       rating: 3.0
     }
   }

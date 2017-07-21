@@ -6,19 +6,14 @@ import AuthModal from '../auth_modal';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      username: '',
-      password: ''
-    };
+    this.state = { email: '', password: '' };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.demoLogin = this.demoLogin.bind(this);
+    this.handleDemoClick = this.handleDemoClick.bind(this);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.loggedIn) {
-  //     this.props.history.push('/');
-  //   }
-  // }
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
 
   update(field) {
     return e => this.setState({
@@ -28,27 +23,33 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const account = this.state;
-    this.props.processForm(account);
+    const user = this.state;
+    this.props.processForm(user);
   }
 
-  demoLogin() {
+  handleDemoClick(e) {
     e.preventDefault();
-       this.props.processForm({email: "bob@gmail", password: "123456"});
-     }
+    this.props.processForm({ email: "alex", password: "123456" });
+  }
 
- renderDemo() {
-   if (this.props.formType === 'login') {
-     return (
-       <button className="btn demo-btn" onClick={this.handleDemoClick}>Demo Account</button>
-     );
-   }
- }
+  renderRedirect() {
+    const redirectMsg = (
+      this.props.formType === 'login' ?
+      "Don't have an account?" : "Already have an account?"
+    );
+
+    return (
+      <div className="other-link">
+        <p>{redirectMsg}</p>
+        <AuthModal buttonClass='session-redirect-btn' formType={this.props.formType} redirect='true'/>
+      </div>
+    );
+  }
 
   renderErrors() {
     return(
-      <ul>
-        {this.props.errors.map((error, i) => (
+      <ul className="errors">
+        {this.props.errors.map( (error, i) => (
           <li key={`error-${i}`}>
             {error}
           </li>
@@ -59,56 +60,42 @@ class SessionForm extends React.Component {
 
   render() {
     const renderMessage = (
-        this.props.formType === 'login' ? 'Log In' : 'Sign Up for dlish'
-      );
+      this.props.formType === 'login' ? 'Log In' : 'Sign Up for dlish'
+    );
 
     return (
-      <div>
-        <div className="login-form-container">
-          <form onSubmit={this.handleSubmit} className="login-form-box">
+      <div className="session-form-container">
 
-            <div className="errors">{this.renderErrors()}</div>
+        <h3>{renderMessage}</h3>
 
-            <div className="login-form">
-              <br/>
-                <label className="log-in-text-input">
-                  <input type="text"
-                    placeholder="Username"
-                    value={this.state.username}
-                    onChange={this.update('username')}
-                    className="login-input"
-                  />
-                </label>
-                <br/>
-
-                <br/>
-                <label className="log-in-text-input">
-                  <input type="password"
-                    placeholder="Password"
-                    value={this.state.password}
-                    onChange={this.update('password')}
-                    className="login-input"
-                  />
-                </label>
-                <br/>
-
-                  <input type="submit" className="submit-button" value="Log In" />
-              </div>
-            </form>
-
-            <div className="social-box">
+          <form onSubmit={this.handleSubmit}>
+            <div className="session-form-box">
             <br/>
-              <a className="linkedin logo" href="https://www.linkedin.com" target="_blank">
-                <img src={window.images.linkedin_icon} className="linkedin-icon" />
-              </a>
-              <a className="github logo" href="https://github.com" target="_blank">
-                <img src={window.images.github_icon} className="github-icon"  />
-              </a>
-              <a className="resume logo" href="http://www.google.com" target="_blank">
-                <img src={window.images.resume_icon} className="resume-icon" />
-              </a>
-            </div>
-        </div>
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                placeholder="Please enter your email address"
+                className="session-input"
+                />
+            <br/>
+
+              <input type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                placeholder="Password"
+                className="session-input"
+                />
+            <br/>
+
+            {this.renderErrors()}
+
+            <input type="submit" className="btn green" value={this.props.formType === 'login' ? 'Log In' : 'Sign Up'}/>
+            <button className="btn demo-btn" onClick={this.handleDemoClick}>Demo Account</button>
+          </div>
+        </form>
+
+        {this.renderRedirect()}
+
       </div>
     );
   }

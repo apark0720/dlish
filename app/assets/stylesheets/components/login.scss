@@ -1,181 +1,261 @@
-.login-form-container {
-  font-family: 'Open sans';
-  width: 350px;
-  height: 100%;
-  margin: auto;
-  background-color: white;
-  color: white;
-  font-family: sans-serif;
-  font-size: 11px;
-  letter-spacing: .03em;
-  text-align: center;
-}
-
-.social-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  box-shadow: 2px 2px 9px 3px rgba(0,0,0,.2);
-  padding: 12px;
-  background: #A2CD39;
-  border-radius: 5px;
-}
-
-.logo {
-  padding-top: 8px;
-  display: block;
-  width: 74px;
-  height: 27px;
-  background: #212121;
-  border-radius: 5px;
-  border-bottom: 5px solid;
-  transition: background-color 1s, transform .25s;
-  position: relative;
-}
-
-.linkedin {
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom-color: #0077b5;
-}
-.linkedin-icon{
-  position: relative;
-  height: 19px;
-}
-.linkedin:hover {
-  background-color: #0077b5;
-}
-
-.github {
-  border-bottom-color: #d971db;
-}
-.github:hover{
-  background-color: #d971db;
-}
-.github-icon {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  background: none;
-  z-index: 100;
-  bottom: 9px;
-}
-
-.resume {
-  border-bottom-color: #D34836;
-}
-.resume-icon {
-  border-bottom-color: #D34836;
-  position: relative;
-  bottom: 3px;
-}
-
-.resume:hover {
-  background-color: #D34836;
-}
-
-.login-divider {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px 0 10px 0;
-}
-.errors{
-  color: red;
-  justify-content: center;
-  width: inherit;
-}
-.divider{
-  opacity: .5;
-  height: 1px;
-  color: white;
-  text-decoration: line-through;
-  background: url(//dlish.com/images/access/fading-section-break.png) no-repeat;
-  display: inline-block;
-  opacity: .7;
-}
-.login-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 2px 2px 9px 3px rgba(0,0,0,.2);
-  padding: 6px;
-  border: 1px solid transparent;
-  background: #A2CD39;
-  border-radius: 5px;
-  height: 170px;
-}
-.login-input {
-  padding: 5px 10px;
-  width: 300px;
-  height: 18px;
-  border: 1px transparent;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  background-color: #191919;
-  font-size: 1.1em;
-  color: grey;
-  letter-spacing: .02em;
-  line-height: 1.5em;
-  box-sizing: content-box;
-}
-.login-input:focus{
-  border: 1px solid green;
-  outline-offset: none;
-  outline-color: green;
-}
-.login-form-session {
-  height: 94px;
-  padding: 0px;
+.session-form-container {
   box-sizing: border-box;
-  .login-input {
-    background-color: rgb(250, 255, 189);
+  width: 100%;
+  height: 350px;
+  max-width: 550px;
+  padding: 0px 10px;
+  // background-color: $white;
+  // margin: 70px auto;
+
+  // .side-icon {
+  //   float: right;
+  //   margin-right: 15px;
+  //   margin-top: -40px;
+  //   position: relative;
+  //   z-index: 3;
+  //   color: $gray;
+  // }
+
+  h3 {
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  .session-input {
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    // border: 1px solid $light-gray;
+    // color: $gray;
+    background-color: #faffbd;
+    border-radius: 3px;
+
+    // font-family: "FontAwesome", $font-stack;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+
+     &:focus {
+      //  box-shadow: 0 0 5px $gray;
+       border: 1px solid rgba(81, 203, 238, 1);
+     }
   }
 }
-.last {
-  margin-bottom: 0;
+
+.session-form-box {
+  width: 500px;
+  text-align: left;
+  // display: block;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: left;
+
+  .btn {
+    height: 40px;
+  }
 }
-.terms {
-  padding-top: 10px;
-}
-.sign-up-buttons{
+
+.other-link {
   display: flex;
-  flex-direction: row;
-  margin-top: 5px;
-  justify-content: flex-end;
-  padding: 10px 0 10px 0;
-  width: 350px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: lighter;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 17px 12px;
+  // border-top: 1px solid $light-gray;
+
+  p {
+    font-size: 17px;
+    padding-top: 3px;
+  }
+
+  span {
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
 }
-.to-login-link {
-  padding: 10px 0 10px 0;
-  text-decoration: none;
-  border-style: none;
-  height: 40px;
-  color: white;
-  border-radius: 2px;
-  margin-left: 5px;
-  width: 95px;
-}
-.demo-login {
-  background-color: #141518;
-  font-size: 14px;
-}
-.submit-button {
-  font-size: 14px;
-  padding: 10px 0 10px 0;
-  color: blue;
-  background: #5c69ff;
-  border-style: none;
-  height: 40px;
-  color: white;
-  border-radius: 2px;
-  margin-left: 5px;
-  margin-top: 10px;
-  width: 95px;
-}
+// .login-form-container {
+//   font-family: 'Open sans';
+//   width: 350px;
+//   height: 100%;
+//   margin: auto;
+//   background-color: white;
+//   color: white;
+//   font-family: sans-serif;
+//   font-size: 11px;
+//   letter-spacing: .03em;
+//   text-align: center;
+// }
+//
+// .social-box {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   box-shadow: 2px 2px 9px 3px rgba(0,0,0,.2);
+//   padding: 12px;
+//   background: #A2CD39;
+//   border-radius: 5px;
+// }
+//
+// .logo {
+//   padding-top: 8px;
+//   display: block;
+//   width: 74px;
+//   height: 27px;
+//   background: #212121;
+//   border-radius: 5px;
+//   border-bottom: 5px solid;
+//   transition: background-color 1s, transform .25s;
+//   position: relative;
+// }
+//
+// .linkedin {
+//   font-size: 20px;
+//   color: white;
+//   text-align: center;
+//   text-decoration: none;
+//   font-weight: bold;
+//   border-bottom-color: #0077b5;
+// }
+// .linkedin-icon{
+//   position: relative;
+//   height: 19px;
+// }
+// .linkedin:hover {
+//   background-color: #0077b5;
+// }
+//
+// .github {
+//   border-bottom-color: #d971db;
+// }
+// .github:hover{
+//   background-color: #d971db;
+// }
+// .github-icon {
+//   width: 30px;
+//   height: 30px;
+//   position: relative;
+//   background: none;
+//   z-index: 100;
+//   bottom: 9px;
+// }
+//
+// .resume {
+//   border-bottom-color: #D34836;
+// }
+// .resume-icon {
+//   border-bottom-color: #D34836;
+//   position: relative;
+//   bottom: 3px;
+// }
+//
+// .resume:hover {
+//   background-color: #D34836;
+// }
+//
+// .login-divider {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   margin: 10px 0 10px 0;
+// }
+// .errors{
+//   color: red;
+//   justify-content: center;
+//   width: inherit;
+// }
+// .divider{
+//   opacity: .5;
+//   height: 1px;
+//   color: white;
+//   text-decoration: line-through;
+//   background: url(//dlish.com/images/access/fading-section-break.png) no-repeat;
+//   display: inline-block;
+//   opacity: .7;
+// }
+// .login-form {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   box-shadow: 2px 2px 9px 3px rgba(0,0,0,.2);
+//   padding: 6px;
+//   border: 1px solid transparent;
+//   background: #A2CD39;
+//   border-radius: 5px;
+//   height: 170px;
+// }
+// .login-input {
+//   padding: 5px 10px;
+//   width: 300px;
+//   height: 18px;
+//   border: 1px transparent;
+//   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+//   border-radius: 5px;
+//   background-color: #191919;
+//   font-size: 1.1em;
+//   color: grey;
+//   letter-spacing: .02em;
+//   line-height: 1.5em;
+//   box-sizing: content-box;
+// }
+// .login-input:focus{
+//   border: 1px solid green;
+//   outline-offset: none;
+//   outline-color: green;
+// }
+// .login-form-session {
+//   height: 94px;
+//   padding: 0px;
+//   box-sizing: border-box;
+//   .login-input {
+//     background-color: rgb(250, 255, 189);
+//   }
+// }
+// .last {
+//   margin-bottom: 0;
+// }
+// .terms {
+//   padding-top: 10px;
+// }
+// .sign-up-buttons{
+//   display: flex;
+//   flex-direction: row;
+//   margin-top: 5px;
+//   justify-content: flex-end;
+//   padding: 10px 0 10px 0;
+//   width: 350px;
+//   font-family: 'Open Sans', sans-serif;
+//   font-size: 14px;
+//   font-weight: lighter;
+// }
+// .to-login-link {
+//   padding: 10px 0 10px 0;
+//   text-decoration: none;
+//   border-style: none;
+//   height: 40px;
+//   color: white;
+//   border-radius: 2px;
+//   margin-left: 5px;
+//   width: 95px;
+// }
+// .demo-login {
+//   background-color: #141518;
+//   font-size: 14px;
+// }
+// .submit-button {
+//   font-size: 14px;
+//   padding: 10px 0 10px 0;
+//   color: blue;
+//   background: #5c69ff;
+//   border-style: none;
+//   height: 40px;
+//   color: white;
+//   border-radius: 2px;
+//   margin-left: 5px;
+//   margin-top: 10px;
+//   width: 95px;
+// }
