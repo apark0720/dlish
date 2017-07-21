@@ -3,20 +3,20 @@ import {
 } from 'react-redux';
 
 import {
-  signup
-} from '../../../actions/session_actions';
+  login
+} from '../../actions/session_actions';
 import {
   receiveModal,
   hideModal
-} from '../../../actions/modal_actions';
-import SignupModal from './signup_modal';
+} from '../../actions/modal_actions';
+import LoginModal from './login_modal';
 
 const mapStateToProps = state => ({
   errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({
-  signup: (user) => dispatch(signup(user)),
+  login: (user) => dispatch(login(user)),
   receiveModal: (modalType) => dispatch(receiveModal(modalType)),
   hideModal: () => dispatch(hideModal())
 });
@@ -24,4 +24,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SignupModal);
+)(LoginModal);

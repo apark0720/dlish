@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import ModalWrapper from './modal_wrapper';
 import LoginContainer from '../session_form/login_container';
 import SignupContainer from '../session_form/signup_container';
-import { hideModal } from '../../../actions/modal_actions';
+import { hideModal } from '../../actions/modal_actions';
 
 const ModalContainer = ({ currentModal, hideModal }) => {
   switch (currentModal) {

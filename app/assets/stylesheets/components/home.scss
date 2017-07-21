@@ -1,0 +1,24 @@
+.home-actions {
+
+  justify-content: flex-end;
+  height: 40vh;
+
+  p {
+    padding: 20px;
+    padding-top: 0px;
+    color: $white;
+    font-size: 24px;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+
+    strong {
+      font-size: inherit;
+    }
+  }
+
+  button {
+    padding: 15px 30px;
+    width: 20vw;
+    border: 1px solid $dark-gray;
+    font-weight: bold;
+  }
+}
