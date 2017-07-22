@@ -31,11 +31,22 @@ class Navbar extends React.Component {
     this.props.logout();
   }
 
-  render() {
-    let email = '';
+  authLinks() {
     if (this.props.currentUser) {
-      email = this.props.currentUser.email;
+      return (
+        <div className="row">
+          <ul><li><p>{ this.props.currentUser.email }</p></li></ul>
+          <button onClick={ this.handleLogout }>Log Out</button>
+        </div>);
+    } else {
+      return (
+        <div className="row">
+          <button onClick={ this.handleLoginClick }>Log In</button>
+        </div>);
     }
+  }
+
+  render() {
     return (
       <nav className="navbar">
         <menu className="row">
@@ -46,30 +57,19 @@ class Navbar extends React.Component {
             <li>
               <a target="_blank"
                 href="https://www.linkedin.com/">
-                About
+                View Menu
               </a>
             </li>
             <li>
               <a target="_blank"
-                href="mailto:apark0720@gmail.com">Contact</a>
+                href="mailto:apark0720@gmail.com">
+                Submit Recipe
+              </a>
             </li>
           </ul>
         </menu>
         <menu>
-          <Switch>
-            <Route exact path="/">
-              <div className="row">
-                <a onClick={ this.handleLoginClick }>Log In</a>
-                <button onClick={ this.handleGuestLogin }>Get Started</button>
-              </div>
-            </Route>
-            <Route>
-              <div className="row">
-                <ul><li><p>{ email }</p></li></ul>
-                <button onClick={ this.handleLogout }>Log Out</button>
-              </div>
-            </Route>
-          </Switch>
+          { this.authLinks() }
         </menu>
       </nav>
     );

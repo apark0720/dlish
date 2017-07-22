@@ -12,7 +12,7 @@ import {
 import SignupModal from './signup_modal';
 
 const mapStateToProps = state => ({
-  errors: state.errors
+  errors: state.session.errors
 });
 
 const mapDispatchToProps = dispatch => ({

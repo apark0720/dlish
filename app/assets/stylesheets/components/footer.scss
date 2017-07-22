@@ -5,7 +5,7 @@
   height: 100px;
   width: 100%;
   padding: 0 2.5%;
-  border-top: 4px solid $sharp-accent;
+  border-top: 4px solid $orange;
   box-shadow: 0 2px 4px rgba(0,0,0,0.25);
   box-sizing: border-box;
   background-color: $secondary;
@@ -43,7 +43,7 @@
 }
 
 .nav-footer a:hover {
-  color: $lighter-accent;
+  color: $lime;
 }
 
 .nav-footer small {

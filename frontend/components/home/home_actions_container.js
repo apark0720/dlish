@@ -12,11 +12,7 @@ import HomeActions from './home_actions';
 
 const mapDispatchToProps = (dispatch) => ({
   receiveModal: (modalType) => dispatch(receiveModal(modalType)),
-  login: () => dispatch(login({
-    id: null,
-    email: 'alex',
-    password: '123456'
-  }))
+  login: (user) => dispatch(login(user))
 });
 
 export default connect(

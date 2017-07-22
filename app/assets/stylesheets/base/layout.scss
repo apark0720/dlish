@@ -17,7 +17,7 @@ form {
   }
 
   a {
-    color: $light-accent;
+    color: $lime;
   }
 }
 
@@ -35,13 +35,13 @@ button {
   margin: 10px;
   border-radius: 3px;
   padding: 5px 10px;
-  background: $light-accent;
+  background: $lime;
   color: $white;
   box-shadow: 0 2px 3px rgba(0,0,0,0.25);
 }
 
 button:hover {
-  background: $lighter-accent;
+  background: $lime;
 }
 
 button.disabled {

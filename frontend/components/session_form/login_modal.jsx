@@ -1,15 +1,13 @@
 import React from 'react';
 
 const _nullUser = {
-  id: null,
   email: '',
   password: ''
 };
 
 const _guestUser = {
-  id: null,
   email: 'alex',
-  password: 'password'
+  password: '123456'
 };
 
 class LoginModal extends React.Component {
@@ -56,11 +54,16 @@ class LoginModal extends React.Component {
     return (e => this.setState({ [property]: e.target.value }));
   }
 
+
   render() {
+    let errorLis = this.props.errors.map((error, idx) => (
+      <li key={idx} className="error-text">{error}</li>
+    ));
+
     return (
       <form>
         <ul>
-
+          { errorLis }
         </ul>
         <input
           type="text"
@@ -90,8 +93,5 @@ class LoginModal extends React.Component {
   }
 }
 
-// let errorLis = this.props.errors.map((error, idx) => (
-//   <li key={idx} className="error-text">{error}</li>
-// ));
-          // { errorLis }
+
 export default LoginModal;

@@ -20,11 +20,7 @@ const mapStateToProps = ({
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  login: () => dispatch(login({
-    id: null,
-    email: 'alex',
-    password: '123456'
-  })),
+  login: () => dispatch(login()),
   receiveModal: (modalType) => dispatch(receiveModal(modalType))
 });
 
