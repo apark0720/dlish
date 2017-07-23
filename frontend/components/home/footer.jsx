@@ -2,27 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = (props) => (
-  <footer className="nav-footer">
-    <menu className="row">
-      <ul className="row">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/">
-            About
-          </a>
-        </li>
-        <li><a href="mailto:apark0720@gmail.com">Contact</a></li>
-      </ul>
-    </menu>
-    <menu>
-      <p className="row">
-        <small>
-          this is dlish footer <br />© 2017 Alex Park
-        </small>
-      </p>
-    </menu>
+  <footer className="footer">
+    <section className="foot-left">
+      <h1>About</h1>
+      <p>dlish is a web application inspired by lishfood.com, <br/> that delivers delicious chef-prepared meals to your office. </p>
+    </section>
+    <section className="foot-right">
+      <img className="icon" src={ window.images.github_icon }/>
+      <img className="icon" src={ window.images.linkedin_icon }/>
+      <img className="email-icon" src={ window.images.email_icon }/>
+    </section>
   </footer>
 );
 

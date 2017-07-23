@@ -7,17 +7,17 @@ import Footer from '../home/footer';
 
 const Home = () => (
   <section>
-    <NavbarContainer />
+
     <main>
+      <NavbarContainer />
       <div className="homepage-video">
         <video loop autoPlay>
-          <source src="http://res.cloudinary.com/apark0720/video/upload/v1500681046/videobanner-lowerres_iycnbi.mp4" type="video/mp4" />
+          <source src="http://res.cloudinary.com/apark0720/video/upload/v1500767920/dlishbanner_ylseil.mp4" type="video/mp4" />
         </video>
-        <h1>Any recipe in the world, <br/> prepared by the best</h1>
+        <h1>Any recipe in the world, <br/> delivered to your office.</h1>
       </div>
 
       <div className="homepage-container">
-
         <div className="homepage-content">
          <div className="homepage-info-container">
            <div className="homepage-info">
@@ -30,12 +30,12 @@ const Home = () => (
 
           <div className="homepage-body">
             <div className="homepage-entry">
-              <img className="homepage-image" src={"http://res.cloudinary.com/apark0720/image/upload/v1500735174/1stpic_tg7wjj.png"} alt="cartoon-figures" />
+              <img className="homepage-image-1" src={"http://res.cloudinary.com/apark0720/image/upload/v1500735174/1stpic_tg7wjj.png"} alt="cartoon-figures" />
 
               <div className="homepage-blurb">
-                <h2>Submit a Recipe!</h2>
+                <h2>Submit a Recipe</h2>
                 <p>
-                  Submit a url of a video recipe (non-video recipes are okay too!) and designate a time and place for delivery.
+                  Found a mouthwatering recipe but don't want to make it yourself? Submit a link of the recipe and designate a time and place for delivery.
                 </p>
               </div>
 
@@ -44,33 +44,35 @@ const Home = () => (
 
             <div className="homepage-entry">
               <div className="homepage-blurb">
-                <h2>If our chefs can make the dish, you will be notified and your recipe will appear on our menu</h2>
+                <h2>Get notified within 24 hours</h2>
                 <p>
-                  We partner with dozens of top chefs that specialize in everything from Thai to BBQ. The best chef for the job will add a personal touch and handcraft each meal
+                  If our chefs can make the dish, you will receive an email and your recipe will appear on our menu. We partner with dozens of top chefs that specialize in everything from Thai to BBQ. The best chef for the job will add a personal touch and handcraft each meal.
                 </p>
               </div>
-              <img className="homepage-image" src={"http://res.cloudinary.com/apark0720/image/upload/v1500735176/2ndpic_wfnaoo.png"} alt="cartoon-figures" />
+              <img className="homepage-image-2" src={"http://res.cloudinary.com/apark0720/image/upload/v1500735176/2ndpic_wfnaoo.png"} alt="cartoon-figures" />
             </div>
 
 
             <div className="homepage-entry">
-              <img className="homepage-image" src={"http://res.cloudinary.com/apark0720/image/upload/v1500735178/3rd_pic_sqh8gy.png"} alt="cartoon-figures" />
+              <img className="homepage-image-3" src={"http://res.cloudinary.com/apark0720/image/upload/v1500735178/3rd_pic_sqh8gy.png"} alt="cartoon-figures" />
               <div className="homepage-blurb">
-                <h2>The more people who join your order, the cheaper your meal will be</h2>
+                <h2>The more the merrier!</h2>
                 <p>
-                  Invite your coworkers and friends to join you!
+                  The more people who join your order, the cheaper your meal will be. Invite your coworkers and friends to join you!
                 </p>
               </div>
-
             </div>
 
-
+            <div className="order-now">
+              <button>Order Now</button>
+            </div>
 
         </div>
       </div>
+
+      <Footer />
     </main>
   </section>
 );
-// <Footer />
 
 export default Home;

@@ -13,7 +13,7 @@
   border-bottom: 4px solid $orange;
   box-shadow: 0 2px 4px rgba(0,0,0,0.25);
   box-sizing: border-box;
-  background-color: $white;
+  background-color: white;
 }
 
 .navbar menu {
@@ -48,6 +48,7 @@
   height: 100%;
   vertical-align: middle;
   color: $gray;
+  font-family: $heading;
   font-size: 16px;
   display: flex;
   align-items: center;
