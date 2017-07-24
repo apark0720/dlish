@@ -25,4 +25,4 @@ Loads React web app
 
 ### Orders
 
-- `POST /api/rewards/:rewardId/orders`
+- `POST /api/recipes/:recipeId/orders`

@@ -48,7 +48,9 @@ const Home = () => (
               <div className="homepage-blurb">
                 <h2>Get notified within 24 hours</h2>
                 <p>
-                  If our chefs can make the dish, you will receive an email and your recipe will appear on our menu. We partner with dozens of top chefs that specialize in everything from authentic Thai cuisine to Texas BBQ. The best chef for the job will add a personal touch and handcraft each meal.
+                  We partner with dozens of top chefs that specialize in everything from authentic Thai cuisine to Texas BBQ.
+                  If our chefs can make the dish, you will receive a notification that your recipe has been added to our menu.
+                  Our chefs will designate a price and minimum order number to start preparing your meal.    
                 </p>
               </div>
               <img className="homepage-image-2" src={"http://res.cloudinary.com/apark0720/image/upload/v1500784759/pic2_j3npyc.jpg"} alt="cartoon-figures" />
