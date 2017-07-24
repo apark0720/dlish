@@ -6,7 +6,7 @@ const _nullUser = {
 };
 
 const _guestUser = {
-  email: 'alex',
+  email: 'guest@dlishfood.co',
   password: '123456'
 };
 

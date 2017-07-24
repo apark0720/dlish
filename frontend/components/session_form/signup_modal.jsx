@@ -1,7 +1,6 @@
 import React from 'react';
 
 const _nullUser = {
-  id: null,
   email: '',
   password: '',
   confirmPassword: ''
