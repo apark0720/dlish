@@ -41,15 +41,15 @@ recipe4 = Recipe.create!(title: 'Strawberry Daifuku Mochi', description: 'Yum', 
                          main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500946268/recipe4_ltwufw.jpg',
                          price: 6, recipe_source: 'Daily Cook', status: "pending", category: "sweet", chef_image_url: taneda, creator_id: 1)
 
-recipe5 = Recipe.create!(title: 'Strawberry Oreo Parfait', description: 'Yum', chef_name: 'Chef Prakash Niroula',
+recipe5 = Recipe.create!(title: 'Strawberry Oreo Parfait', description: 'Yum', chef_name: 'Chef Ethan Stowell',
                          url: 'https://www.youtube.com/watch?v=wZ5-sfl28jk',
                          main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500946405/recipe5_vssff5.jpg',
-                         price: 6, recipe_source: 'Cooking Tree', status: "pending", category: "sweet", chef_image_url: , creator_id: 1)
+                         price: 6, recipe_source: 'Cooking Tree', status: "pending", category: "sweet", chef_image_url: stowell, creator_id: 1)
 
-recipe6 = Recipe.create!(title: 'Christmas Lasgna', description: 'Yum', chef_name: 'Chef Ericka Burke',
+recipe6 = Recipe.create!(title: 'Christmas Lasagna', description: 'Yum', chef_name: 'Chef Ericka Burke',
                          url: 'http://foodwishes.blogspot.com/2010/12/christmas-lasagna.html',
                          main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500946407/recipe6_jch4as.jpg',
-                         price: 6, recipe_source: 'Food Wishes', status: "pending", category: "savory", chef_image_url: niroula, creator_id: 1)
+                         price: 6, recipe_source: 'Food Wishes', status: "pending", category: "savory", chef_image_url: burke, creator_id: 1)
 
 recipe7 = Recipe.create!(title: 'Extra Large Matcha Kit Kats', description: 'Yum', chef_name: 'Chef Shimi Kahn',
                          url: 'http://blog.naver.com/ydiddnal',
