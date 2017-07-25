@@ -46,6 +46,6 @@ class Api::RecipesController < ApplicationController
   def recipe_params
     params.require(:recipe).permit(:title, :description, :chef_name, :delivery_address,
                                    :delivery_datetime, :url, :main_image_url, :price,
-                                   :lowest_price, :order_by_date, :recipe_source, :creator_id, :status)
+                                   :lowest_price, :order_by_date, :recipe_source, :creator_id)
   end
 end

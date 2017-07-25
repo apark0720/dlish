@@ -1,13 +1,9 @@
 import React from 'react';
 
-import NavbarContainer from '../navigation/navbar_container';
 import HomeActionsContainer from './home_actions_container';
-import GuestLoginContainer from './guest_login_container';
-import Footer from '../home/footer';
 
 const Home = () => (
   <section>
-    <NavbarContainer />
     <main>
       <div>
         <div className="homepage-video">
@@ -50,7 +46,7 @@ const Home = () => (
                 <p>
                   We partner with dozens of top chefs that specialize in everything from authentic Thai cuisine to Texas BBQ.
                   If our chefs can make the dish, you will receive a notification that your recipe has been added to our menu.
-                  Our chefs will designate a price and minimum order number to start preparing your meal.    
+                  Our chefs will designate a price and minimum order number to start preparing your meal.
                 </p>
               </div>
               <img className="homepage-image-2" src={"http://res.cloudinary.com/apark0720/image/upload/v1500784759/pic2_j3npyc.jpg"} alt="cartoon-figures" />
@@ -73,8 +69,6 @@ const Home = () => (
 
         </div>
       </div>
-
-      <Footer />
     </main>
   </section>
 );

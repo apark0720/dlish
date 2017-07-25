@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170724021823) do
+ActiveRecord::Schema.define(version: 20170725001153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,13 +27,11 @@ ActiveRecord::Schema.define(version: 20170724021823) do
     t.integer  "lowest_price",           null: false
     t.integer  "lowest_price_threshold"
     t.integer  "max_orders"
-    t.date     "order_by_date",          null: false
+    t.datetime "order_by_date",          null: false
     t.integer  "recipe_source",          null: false
     t.integer  "creator_id",             null: false
-    t.string   "category"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.string   "status",                 null: false
     t.index ["creator_id"], name: "index_recipes_on_creator_id", using: :btree
   end
 
