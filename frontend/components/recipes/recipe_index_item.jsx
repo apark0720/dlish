@@ -74,14 +74,7 @@ class RecipeTile extends React.Component {
               </div>
 
               <div className="tile-bottom">
-                <span>${recipe.price}</span>
-                &nbsp;
 
-                <div className="progress-bar" style={{width: `${progressPercent}`, maxWidth: '100%'}} />
-                <div className="progress-label">
-                  <div className="tile-percent">{progressPercent}</div>
-                  <div>{this.daysLeft()} days left</div>
-                </div>
               </div>
             </div>
           </Link>
@@ -90,5 +83,14 @@ class RecipeTile extends React.Component {
     );
   }
 };
+
+// <span>${recipe.price}</span>
+// &nbsp;
+//
+// <div className="progress-bar" style={{width: `${progressPercent}`, maxWidth: '100%'}} />
+// <div className="progress-label">
+//   <div className="tile-percent">{progressPercent}</div>
+//   <div>{this.daysLeft()} days left</div>
+// </div>
 
 export default RecipeTile;

@@ -26,11 +26,11 @@ class RecipeIndex extends React.Component {
   let activeRecipes = this.selectRecipes();
     return (
       <div className="allrecipes-scope">
-        <h1 className="all-header">Menu</h1>
+        <h1 className="all-header">This Week's Menu</h1>
         <div className="recipes">
           <div className="allrecipes-text">
-            <span>Showing results for:</span>
-            <span className="allrecipes-span">All Recipes</span>
+            <span>Showing results in:</span>
+            <span className="allrecipes-span">98144</span>
           </div>
           <div className="recipe-list">
           {activeRecipes}

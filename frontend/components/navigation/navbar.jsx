@@ -35,8 +35,9 @@ class Navbar extends React.Component {
     if (this.props.currentUser) {
       return (
         <div className="row">
-          <ul><li><p>{ this.props.currentUser.email }</p></li></ul>
-          <button onClick={ this.handleLogout }>Log Out</button>
+          <ul><li><p>{ this.props.currentUser.email } (zip: 98144)</p></li></ul>
+            <a onClick={ this.handleLogout }>Log Out</a>
+
         </div>);
     } else {
       return (

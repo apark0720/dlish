@@ -20,6 +20,12 @@ const ModalContainer = ({ modal, hideModal }) => {
           <SignupContainer />
         </ModalWrapper>
       );
+    case 'RECIPE_MODAL':
+      return (
+        <ModalWrapper hideModal={ hideModal } title="View Recipe Details">
+          <RecipeContainer />
+        </ModalWrapper>
+      );
     default:
       return null;
   }
