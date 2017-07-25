@@ -41,7 +41,7 @@ class Navbar extends React.Component {
     } else {
       return (
         <div className="row">
-          <button onClick={ this.handleLoginClick }>Log In</button>
+          <a onClick={ this.handleLoginClick }>Log In</a>
         </div>);
     }
   }
@@ -55,21 +55,18 @@ class Navbar extends React.Component {
           </Link>
           <ul className="row">
             <li>
-              <a target="_blank"
-                href="https://www.linkedin.com/">
-                View Menu
-              </a>
+              <a target="_blank">Upvote</a>
             </li>
             <li>
-              <a target="_blank"
-                href="mailto:apark0720@gmail.com">
-                Submit Recipe
-              </a>
+              <a target="_blank">Submit Recipe</a>
             </li>
           </ul>
         </menu>
         <menu>
           { this.authLinks() }
+          <Link to="/menu">
+            <button>View Menu</button>
+          </Link>
         </menu>
       </nav>
     );
