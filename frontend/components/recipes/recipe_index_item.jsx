@@ -57,7 +57,7 @@ class RecipeTile extends React.Component {
 
   render() {
     const recipe = this.props.recipe;
-    const progress = (20 * 100 / recipe.lowest_price_threshold)
+    const progress = (35)
     const progressPercent = `${Math.round(progress)}%`
     return (
 
@@ -67,15 +67,16 @@ class RecipeTile extends React.Component {
               <img className="tile-img" src={recipe.main_image_url}></img>
 
             <div className="tile-info">
-              <div className="tile-title-tagline">
-                <div>{recipe.title}</div>
-                <div>{recipe.chef_name}</div>
+              <div>
+                <div className="tile-title-tagline">{recipe.title}</div>
+                <div className="sub">Prepared by: {recipe.chef_name}</div>
+                <div className="sub">Recipe Source: {recipe.recipe_source}</div>
               </div>
 
               <div className="tile-bottom">
                 <span>${recipe.price}</span>
                 &nbsp;
-                <span>USD</span>
+
                 <div className="progress-bar" style={{width: `${progressPercent}`, maxWidth: '100%'}} />
                 <div className="progress-label">
                   <div className="tile-percent">{progressPercent}</div>

@@ -10,28 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725001153) do
+ActiveRecord::Schema.define(version: 20170725195435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "recipes", force: :cascade do |t|
-    t.string   "title",                  null: false
-    t.text     "description",            null: false
-    t.string   "chef_name",              null: false
-    t.string   "delivery_address",       null: false
-    t.datetime "delivery_datetime",      null: false
-    t.string   "url",                    null: false
-    t.string   "main_image_url",         null: false
-    t.integer  "price",                  null: false
-    t.integer  "lowest_price",           null: false
-    t.integer  "lowest_price_threshold"
-    t.integer  "max_orders"
-    t.datetime "order_by_date",          null: false
-    t.integer  "recipe_source",          null: false
-    t.integer  "creator_id",             null: false
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "title",                              null: false
+    t.text     "description",                        null: false
+    t.string   "chef_name",                          null: false
+    t.string   "url",                                null: false
+    t.string   "main_image_url",                     null: false
+    t.integer  "price"
+    t.string   "recipe_source",                      null: false
+    t.integer  "creator_id",                         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.string   "status",         default: "pending", null: false
+    t.string   "category",                           null: false
+    t.string   "chef_image_url",                     null: false
     t.index ["creator_id"], name: "index_recipes_on_creator_id", using: :btree
   end
 

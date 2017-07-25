@@ -20,7 +20,7 @@
 }
 
 .all-header {
-  font-family: "Libre Franklin", sans-serif;
+  font-family: $heading;
   font-size: 40px;
   font-weight: normal;
   line-height: 50px;
@@ -30,7 +30,7 @@
 }
 
 .allrecipes-text {
-  font-family: "Libre Franklin", sans-serif;
+  font-family: $text;
   font-size: 16px;
   font-weight: 500;
   padding-left: 20px;
@@ -76,9 +76,9 @@
 
 .tile-link {
   display: block;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  color: #2A2A2A;
+  color: $dark-gray;
 }
 
 .tile-link:hover {
@@ -89,7 +89,7 @@
     }
 
     .progress-bar {
-      background-color: #EB1478;
+      background-color: $lime;
     }
 
 }
@@ -142,4 +142,8 @@
   color: #A8A8A8;
   font-size: 11px;
   font-weight: 300;
+}
+
+.sub {
+  font-style: italic;
 }
