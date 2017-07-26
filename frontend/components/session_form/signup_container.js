@@ -3,6 +3,7 @@ import {
 } from 'react-redux';
 
 import {
+  login,
   signup
 } from '../../actions/session_actions';
 import {
@@ -17,6 +18,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  login: (user) => dispatch(login(user)),
+
   signup: (user) => dispatch(signup(user)),
   clearErrors: () => dispatch(clearErrors()),
   receiveModal: (modalType) => dispatch(receiveModal(modalType)),

@@ -34,7 +34,7 @@ const Home = () => (
                 <h2>Submit a recipe</h2>
                 <p>
                   Found a mouthwatering recipe but don't want to make it yourself? We got you covered!
-                  Simply submit a link of the recipe to suggest what should be on next week's menu.
+                  Simply submit a link of the recipe to suggest what you want to see on next week's menu.
                 </p>
               </div>
 

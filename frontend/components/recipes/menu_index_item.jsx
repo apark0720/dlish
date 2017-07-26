@@ -46,7 +46,40 @@ class MenuIndexItem extends React.Component {
             </div>
           </a>
 
-          <MenuModal />
+          <Modal
+           contentLabel="Modal"
+           isOpen={this.state.modalShowOpen}
+           onRequestClose={this.closeShowModal}
+           style={style}>
+
+           <section className="recipe-show-container">
+             <button onClick={this.closeShowModal}>
+               <i className="fa fa-times" aria-hidden="true"></i>
+             </button>
+
+             <section className="recipe-show">
+               <figure className="recipe-box">
+                 <img src={recipe.main_image_url} />
+               </figure>
+
+               <aside className="recipe-info">
+                 <header className="recipe-user-info">
+                   <img src={recipe.chef_image_url}/>
+                   <div className="username">
+                     <h1>{recipe.chef_name}</h1>
+                   </div>
+                 </header>
+
+                 <figcaption className="recipe-details">
+                   <h2>{recipe.title}</h2>
+                   <br/>
+                   <p>{recipe.description}</p>
+                 </figcaption>
+               </aside>
+             </section>
+
+           </section>
+         </Modal>
         </div>
     );
   }

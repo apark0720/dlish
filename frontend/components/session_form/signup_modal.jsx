@@ -6,6 +6,11 @@ const _nullUser = {
   confirmPassword: ''
 };
 
+const _guestUser = {
+  email: 'guest@dlishfood.co',
+  password: '123456'
+};
+
 class SignupModal extends React.Component {
   constructor(props) {
     super(props);
@@ -15,12 +20,22 @@ class SignupModal extends React.Component {
     this.switchModal = this.switchModal.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
+
+    this.handleGuestLogin = this.handleGuestLogin.bind(this);
   }
 
   componentWillUnmount() {
     this.props.clearErrors();
   }
-  
+
+  handleGuestLogin(e) {
+    e.preventDefault();
+    let hideModal = this.props.hideModal;
+    this.props.login(_guestUser).then(
+      () => hideModal()
+    );
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     let hideModal = this.props.hideModal;
@@ -88,6 +103,7 @@ class SignupModal extends React.Component {
           onClick={ this.handleSubmit }
           className={ !this.submitReady() ? 'disabled' : '' }
         >Sign Up</button>
+        <button type="button" onClick={ this.handleGuestLogin }>Guest</button>
         <a onClick={ this.switchModal }>
           <small>Already signed up? Log in instead.</small>
         </a>

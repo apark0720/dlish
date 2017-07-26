@@ -45,7 +45,6 @@ class SubmitRecipeModal extends React.Component {
    }
 
    closeModal() {
-     this.props.clearErrors();
      this.setState({ modalIsOpen: false });
    }
 

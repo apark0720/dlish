@@ -20,11 +20,13 @@
     constructor(props) {
       super(props);
       this.state = defaultState(this.props.currentUser);
-
-      this.props.clearErrors();
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentWillUnmount() {
+       this.props.clearErrors();
+     }
+     
     update(field) {
       return e => this.setState({
          [field]: e.currentTarget.value
