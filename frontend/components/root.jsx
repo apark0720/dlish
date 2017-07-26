@@ -6,7 +6,7 @@ import Home from './home/home';
 import NavBarContainer from './navigation/navbar_container';
 import Footer from './home/footer';
 import MenuIndexContainer from './recipes/menu_index_container';
-import UpvoteIndexContainer from './recipes/upvote_index_container';
+import SuggestionIndexContainer from './recipes/suggestion_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ModalContainer from './modal/modal_container';
 
@@ -18,7 +18,7 @@ const Root = ({ store }) => (
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route path="/menu" component={ MenuIndexContainer } />
-          <Route path="/upvote" component={ UpvoteIndexContainer } />
+          <Route path="/suggestions" component={ SuggestionIndexContainer } />
         </Switch>
         <ModalContainer />
         <Footer />

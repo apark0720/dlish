@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import style from './modal_style';
 
-class UpvoteIndexItem extends React.Component {
+class SuggestionIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -89,4 +89,4 @@ class UpvoteIndexItem extends React.Component {
 };
 
 
-export default UpvoteIndexItem;
+export default SuggestionIndexItem;

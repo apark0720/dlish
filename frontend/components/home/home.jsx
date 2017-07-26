@@ -45,7 +45,7 @@ const Home = () => (
               <div className="homepage-blurb">
                 <h2>Vote for next week's menu</h2>
                 <p>
-                  Vote for the recipes that you want on next week's menu. Recipes with the highest votes will appear on next week's menu.
+                  Vote on the menu suggestions submitted by our users. Recipes with the highest votes will appear on next week's menu.
                   All orders will be available for pick-up between 12:15-12:45pm at a Starbucks of your choice.
                 </p>
               </div>

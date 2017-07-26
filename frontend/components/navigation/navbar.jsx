@@ -57,8 +57,8 @@ class Navbar extends React.Component {
           </Link>
           <ul className="row">
             <li>
-              <Link to="/upvote">
-                Upvote
+              <Link to="/suggestions">
+                Menu Suggestions
               </Link>
             </li>
             <li>

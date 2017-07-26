@@ -35,10 +35,9 @@
 
     handleSubmit(e) {
       e.preventDefault();
-      let newState = Object.assign({}, this.state);
 
-      this.props.createRecipe(newState)
-        .then(recipe => this.props.history.push(`/recipes/${recipe.id}`),
+      this.props.createRecipe(this.state)
+        .then(recipe => this.props.history.push(`/suggestions`),
         err => scroll(0,0));
     }
 
@@ -101,7 +100,7 @@
 
 
 
-            <div><span>Submit Form</span>
+            <div><span>Submit <br/> Form</span>
               <input className={ !this.submitReady() ? 'disabled' : '' } type="submit" value="Submit" />
             </div>
           </section>

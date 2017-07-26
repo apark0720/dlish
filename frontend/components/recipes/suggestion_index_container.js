@@ -2,7 +2,7 @@ import {
   connect
 } from 'react-redux';
 
-import UpvoteIndex from './upvote_index';
+import SuggestionIndex from './suggestion_index';
 import {
   requestAllRecipes
 } from '../../actions/recipe_actions';
@@ -25,4 +25,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(UpvoteIndex)
+)(SuggestionIndex)

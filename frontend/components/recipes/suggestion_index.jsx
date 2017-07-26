@@ -1,9 +1,9 @@
 import React from 'react';
 import { withRouter, hashHistory } from 'react-router-dom';
-import UpvoteIndexItem from './upvote_index_item';
+import SuggestionIndexItem from './suggestion_index_item';
 
 
-class UpvoteIndex extends React.Component {
+class SuggestionIndex extends React.Component {
   componentDidMount() {
     this.props.requestAllRecipes();
   }
@@ -13,7 +13,7 @@ class UpvoteIndex extends React.Component {
     this.props.recipes.forEach(recipe => {
       if (recipe.status === "pending") {
         activeRecipes.push(
-          <UpvoteIndexItem
+          <SuggestionIndexItem
             key={recipe.id}
             recipe={recipe} />);
       }
@@ -43,4 +43,4 @@ class UpvoteIndex extends React.Component {
   }
 }
 
-export default withRouter(UpvoteIndex);
+export default withRouter(SuggestionIndex);
