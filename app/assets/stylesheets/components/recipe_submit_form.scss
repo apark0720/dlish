@@ -1,0 +1,98 @@
+.recipe-create-form {
+  opacity: 0.9;
+  padding: 40px 0;
+}
+
+.create-header {
+  text-align: center;
+  font-size: 20px;
+}
+
+.create-header h1 {
+  font-family: $banner;
+  color: $dark-gray;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.recipe-create-form > * {
+  margin: 0 20%;
+}
+
+.create-form-contents {
+  font-family: $heading;
+  color: $dark-gray;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary;
+}
+
+.create-form-contents div {
+  display: flex;
+  background-color: $background;
+  border-radius: 6px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.create-form-contents div > * {
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.create-form-contents div span {
+  min-width: 25%;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.create-form-contents input, textarea {
+  width: 75%;
+  resize: none;
+}
+
+.create-form-contents select {
+  width: 75%;
+  color: $dark-gray;
+  background-color: $background;
+}
+
+.create-form-contents input[type="submit"] {
+  font-family: $heading;
+  text-align: center;
+  width: 150px;
+  color: white;
+  background: $lime;
+  transition: all 0.2s ease-in-out;
+}
+
+.create-form-contents input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.create-form-contents input[type="submit"].disabled {
+  cursor: default;
+  background: $gray;
+}
+
+
+.form-description {
+  height: 70px;
+  vertical-align: top;
+}
+
+.errors {
+  margin-top: 10px;
+  color: red;
+  text-align: center;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.errors li {
+  padding: 5px;
+}

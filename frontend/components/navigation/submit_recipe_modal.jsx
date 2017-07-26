@@ -17,12 +17,13 @@ const style = {
   content : {
     position        : 'fixed',
     top             : '75px',
-    left            : '75px',
-    right           : '75px',
-    bottom          : '75px',
+    left            : '550px',
+    right           : '550px',
+    bottom          : '25px',
     margin          : 'auto',
     border          : '1px solid #ccc',
     padding         : '15px 30px',
+    backgroundColor : '#FAF6E8',
     zIndex          : 11
   }
 };

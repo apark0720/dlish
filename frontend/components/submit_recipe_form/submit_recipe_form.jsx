@@ -26,7 +26,7 @@
     componentWillUnmount() {
        this.props.clearErrors();
      }
-     
+
     update(field) {
       return e => this.setState({
          [field]: e.currentTarget.value
@@ -52,9 +52,18 @@
       }
     }
 
+    submitReady() {
+      if (this.state.title.length > 0 && this.state.description.length > 0 &&
+      this.state.url.length > 0 && this.state.recipe_source.length > 0 && this.state.category.length > 0)
+      {
+        return true;
+      }
+      return false;
+    }
+
     render() {
       return (
-        <form className="project-create-form" onSubmit={this.handleSubmit} >
+        <form className="recipe-create-form" onSubmit={this.handleSubmit} >
           <div className="create-header">
             <h1>Submit a Recipe</h1>
           </div>
@@ -73,7 +82,7 @@
 
             <div><span>Category</span>
               <select name="expertise" onChange={this.update('category')} value={this.state.category} >
-                <option value="x" disabled="true">Select a category</option>
+                <option value="x" selected disabled>Select a category</option>
                 {
                   categories.map(category => (
                     <option key={category} value={category}>{category}</option>
@@ -92,8 +101,8 @@
 
 
 
-            <div><span>Submit Recipe</span>
-              <input type="submit" value="Submit" />
+            <div><span>Submit Form</span>
+              <input className={ !this.submitReady() ? 'disabled' : '' } type="submit" value="Submit" />
             </div>
           </section>
         </form>

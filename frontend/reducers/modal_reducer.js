@@ -2,7 +2,7 @@ import {
   RECEIVE_MODAL
 } from '../actions/modal_actions';
 
-const modalReducer = (state = null, action) => {
+const ModalReducer = (state = null, action) => {
   switch (action.type) {
     case RECEIVE_MODAL:
       return action.modalType;
@@ -11,4 +11,4 @@ const modalReducer = (state = null, action) => {
   }
 };
 
-export default modalReducer;
+export default ModalReducer;
