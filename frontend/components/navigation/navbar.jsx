@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
+import SubmitRecipeModal from './submit_recipe_modal';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -61,7 +62,7 @@ class Navbar extends React.Component {
               </Link>
             </li>
             <li>
-              <a target="_blank">Submit Recipe</a>
+              <SubmitRecipeModal/>
             </li>
           </ul>
         </menu>

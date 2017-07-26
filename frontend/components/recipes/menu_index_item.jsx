@@ -9,7 +9,6 @@ class MenuIndexItem extends React.Component {
     super(props);
     this.state = {
       modalShowOpen: false,
-      modalEditOpen: false,
       recipe: this.props.recipe
     };
 
@@ -30,7 +29,6 @@ class MenuIndexItem extends React.Component {
     const recipe = this.props.recipe;
 
     return (
-
         <div className="recipe-tile">
           <a className="tile-link" onClick={this.openShowModal}>
               <img className="tile-img" src={recipe.main_image_url}/>

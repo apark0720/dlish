@@ -10,6 +10,8 @@ import {
   hideModal
 } from '../../actions/modal_actions';
 import LoginModal from './login_modal';
+import { clearErrors } from '../../actions/error_actions';
+
 
 const mapStateToProps = state => ({
   errors: state.session.errors
@@ -17,6 +19,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   login: (user) => dispatch(login(user)),
+  clearErrors: () => dispatch(clearErrors()),
   receiveModal: (modalType) => dispatch(receiveModal(modalType)),
   hideModal: () => dispatch(hideModal())
 });

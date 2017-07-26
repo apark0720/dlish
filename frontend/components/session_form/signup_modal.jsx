@@ -17,6 +17,10 @@ class SignupModal extends React.Component {
     this.handleUpdate = this.handleUpdate.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+  
   handleSubmit(e) {
     e.preventDefault();
     let hideModal = this.props.hideModal;

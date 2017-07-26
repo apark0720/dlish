@@ -9,7 +9,6 @@ class UpvoteIndexItem extends React.Component {
     super(props);
     this.state = {
       modalShowOpen: false,
-      modalEditOpen: false,
       recipe: this.props.recipe
     };
 

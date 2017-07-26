@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170726025630) do
+ActiveRecord::Schema.define(version: 20170726035629) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20170726025630) do
   create_table "recipes", force: :cascade do |t|
     t.string   "title",                              null: false
     t.text     "description",                        null: false
-    t.string   "chef_name",                          null: false
+    t.string   "chef_name"
     t.string   "url",                                null: false
-    t.string   "main_image_url",                     null: false
+    t.string   "main_image_url"
     t.integer  "price"
     t.string   "recipe_source",                      null: false
     t.integer  "creator_id",                         null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170726025630) do
     t.datetime "updated_at",                         null: false
     t.string   "status",         default: "pending", null: false
     t.string   "category",                           null: false
-    t.string   "chef_image_url",                     null: false
+    t.string   "chef_image_url"
     t.index ["creator_id"], name: "index_recipes_on_creator_id", using: :btree
   end
 
