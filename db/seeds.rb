@@ -39,7 +39,7 @@ recipe3 = Recipe.create!(title: 'American French Onion Soup', description: 'Yum'
 recipe4 = Recipe.create!(title: 'Strawberry Daifuku Mochi', description: 'Yum', chef_name: 'Chef Hideaki Taneda',
                          url: 'https://www.youtube.com/watch?v=cdtCAasUwsI',
                          main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500946268/recipe4_ltwufw.jpg',
-                         price: 6, recipe_source: 'Daily Cook', status: "pending", category: "sweet", chef_image_url: taneda, creator_id: 1)
+                         price: 6, recipe_source: 'Daily Cook', status: "active", category: "sweet", chef_image_url: taneda, creator_id: 1)
 
 recipe5 = Recipe.create!(title: 'Strawberry Oreo Parfait', description: 'Yum', chef_name: 'Chef Ethan Stowell',
                          url: 'https://www.youtube.com/watch?v=wZ5-sfl28jk',
@@ -74,12 +74,12 @@ recipe10 = Recipe.create!(title: 'Japanese Curry Udon', description: 'Yum', chef
 recipe11 = Recipe.create!(title: 'Sausage & Shrimp Paella', description: 'Yum', chef_name: 'Chef Shimi Kahn',
                           url: 'http://foodwishes.blogspot.com/2013/08/sausage-shrimp-paella-before-you-run.html',
                           main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500946423/recipe11_zkwfo4.jpg',
-                          price: 6, recipe_source: 'Food Wishes', status: "pending", category: "savory", chef_image_url: kahn, creator_id: 1)
+                          price: 6, recipe_source: 'Food Wishes', status: "active", category: "savory", chef_image_url: kahn, creator_id: 1)
 
 recipe12 = Recipe.create!(title: 'Gochujang Baby Back Ribs with Cheese Fondue', description: 'Yum', chef_name: 'Chefs Shane & Garrett',
                           url: 'https://www.youtube.com/watch?v=XyUKev03188',
                           main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500954703/recipe12_vjgicl.jpg',
-                          price: 6, recipe_source: 'Food N Table', status: "pending", category: "spicy", chef_image_url: shane, creator_id: 1)
+                          price: 6, recipe_source: 'Food N Table', status: "active", category: "spicy", chef_image_url: shane, creator_id: 1)
 
 recipe13 = Recipe.create!(title: 'Creamy Sweet Pumpkin Pasta', description: 'Yum', chef_name: 'Chef Prakash Niroula',
                           url: 'https://www.youtube.com/watch?v=zSU3DQVPLDE',
@@ -99,4 +99,4 @@ recipe15 = Recipe.create!(title: 'Gyudon: Steak Rice Bowl', description: 'Yum', 
 recipe16 = Recipe.create!(title: 'Shakshuka: Eggs Poached in Spicy Tomato Pepper Sauce', description: 'Yum', chef_name: 'Chef Prakash Niroula',
                           url: 'http://foodwishes.blogspot.com/2015/10/shakshuka-say-it-with-me-now.html',
                           main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500954605/recipe16_r2ilom.jpg',
-                          price: 6, recipe_source: 'Food Wishes', status: "pending", category: "spicy", chef_image_url: niroula, creator_id: 1)
+                          price: 6, recipe_source: 'Food Wishes', status: "active", category: "spicy", chef_image_url: niroula, creator_id: 1)

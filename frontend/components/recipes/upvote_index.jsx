@@ -1,9 +1,9 @@
 import React from 'react';
 import { withRouter, hashHistory } from 'react-router-dom';
-import RecipeTile from './recipe_index_item';
+import UpvoteIndexItem from './upvote_index_item';
 
 
-class RecipeIndex extends React.Component {
+class UpvoteIndex extends React.Component {
   componentDidMount() {
     this.props.requestAllRecipes();
   }
@@ -11,9 +11,9 @@ class RecipeIndex extends React.Component {
   selectRecipes() {
     let activeRecipes = [];
     this.props.recipes.forEach(recipe => {
-      if (recipe) {
+      if (recipe.status === "pending") {
         activeRecipes.push(
-          <RecipeTile
+          <UpvoteIndexItem
             key={recipe.id}
             recipe={recipe} />);
       }
@@ -23,10 +23,11 @@ class RecipeIndex extends React.Component {
 
   render() {
     const { recipes } = this.props;
-  let activeRecipes = this.selectRecipes();
+    let activeRecipes = this.selectRecipes();
+
     return (
       <div className="allrecipes-scope">
-        <h1 className="all-header">This Week's Menu</h1>
+        <h1 className="all-header">Vote for Next Week's Menu</h1>
         <div className="recipes">
           <div className="allrecipes-text">
             <span>Showing results in:</span>
@@ -42,4 +43,4 @@ class RecipeIndex extends React.Component {
   }
 }
 
-export default withRouter(RecipeIndex);
+export default withRouter(UpvoteIndex);

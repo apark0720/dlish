@@ -5,7 +5,8 @@ import { HashRouter, Route, Redirect, Switch } from 'react-router-dom';
 import Home from './home/home';
 import NavBarContainer from './navigation/navbar_container';
 import Footer from './home/footer';
-import RecipeIndexContainer from './recipes/recipe_index_container';
+import MenuIndexContainer from './recipes/menu_index_container';
+import UpvoteIndexContainer from './recipes/upvote_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ModalContainer from './modal/modal_container';
 
@@ -16,7 +17,8 @@ const Root = ({ store }) => (
         <NavBarContainer />
         <Switch>
           <Route exact path="/" component={ Home } />
-          <Route path="/menu" component={ RecipeIndexContainer } />
+          <Route path="/menu" component={ MenuIndexContainer } />
+          <Route path="/upvote" component={ UpvoteIndexContainer } />
         </Switch>
         <ModalContainer />
         <Footer />

@@ -56,7 +56,7 @@ const Home = () => (
             <div className="homepage-entry">
               <img className="homepage-image-3" src={"http://res.cloudinary.com/apark0720/image/upload/v1500784759/pic2_j3npyc.jpg"} alt="cartoon-figures" />
               <div className="homepage-blurb">
-                <h2>The best culinary talent in Seattle</h2>
+                <h2>Prepared by the best chefs in Seattle</h2>
                 <p>
                   We partner with dozens of top chefs that specialize in everything from authentic Thai cuisine to Italian street food.
                   Our chefs will add personal touches to the recipes to ensure they are dlish-ious!

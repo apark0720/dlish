@@ -56,7 +56,9 @@ class Navbar extends React.Component {
           </Link>
           <ul className="row">
             <li>
-              <a target="_blank">Upvote</a>
+              <Link to="/upvote">
+                Upvote
+              </Link>
             </li>
             <li>
               <a target="_blank">Submit Recipe</a>
