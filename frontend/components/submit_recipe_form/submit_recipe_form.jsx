@@ -96,11 +96,11 @@
               {this.errors()}
             </ul>
 
-            <div><span>Recipe title</span>
+            <div><span>Recipe Title</span>
               <input type="text" placeholder="Title" onChange={this.update('title')} value={this.state.title} />
             </div>
 
-            <div><span>Short description</span>
+            <div><span>Short Description</span>
               <textarea name="Description" className="form-description" placeholder="Description" onChange={this.update('description')} value={this.state.description}></textarea>
             </div>
 
@@ -115,12 +115,12 @@
               </select>
             </div>
 
-            <div><span>Youtube URL</span>
-              <input type="text" placeholder="URL" onChange={this.update('url')} value={this.state.url} />
+            <div><span>Youtube    URL</span>
+              <input type="text" placeholder="www.youtube.com/watch?v=..." onChange={this.update('url')} value={this.state.url} />
             </div>
 
             <div><span>Recipe Source</span>
-              <input type="text" placeholder="Recipe Source" onChange={this.update('recipe_source')} value={this.state.recipe_source} />
+              <input type="text" placeholder="e.g. Buzzfeed, Foodwishes" onChange={this.update('recipe_source')} value={this.state.recipe_source} />
             </div>
 
 

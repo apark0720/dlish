@@ -8,6 +8,10 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness
 
+  has_many :recipes
+  has_many :upvotes
+  has_many :orders
+  
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
     @password = password

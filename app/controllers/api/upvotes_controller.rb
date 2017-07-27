@@ -1,6 +1,6 @@
 class Api::UpvotesController < ApplicationController
   def create
-    @upvote = upvote.new(upvote_params)
+    @upvote = Upvote.new(upvote_params)
     if @upvote.save
       render "api/upvotes/show"
     else
@@ -9,7 +9,7 @@ class Api::UpvotesController < ApplicationController
   end
 
   def destroy
-    @upvote = upvote.find_by(user_id: upvote_params[:user_id],
+    @upvote = Upvote.find_by(user_id: upvote_params[:user_id],
                             recipe_id: upvote_params[:recipe_id])
     if @upvote
       @upvote.destroy

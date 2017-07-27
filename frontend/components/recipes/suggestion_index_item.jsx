@@ -1,8 +1,7 @@
 import React from 'react';
 import ModalVideo from 'react-modal-video';
-import { withRouter } from 'react-router';
-import { Link } from 'react-router-dom';
 import style from './modal_style';
+import UpvoteContainer from '../upvotes/upvote_container';
 
 class SuggestionIndexItem extends React.Component {
   constructor(props) {
@@ -30,17 +29,19 @@ class SuggestionIndexItem extends React.Component {
 
         <div className="recipe-tile">
 
-          <a className="tile-link" onClick={this.openShowModal}>
-              <img className="tile-img" src={recipe.main_image_url} />
+          <a className="tile-link" >
+              <img className="tile-img" src={recipe.main_image_url} onClick={this.openShowModal}/>
 
             <div className="tile-info">
               <div>
                 <div className="tile-title-tagline">{recipe.title}</div>
-                <div className="sub">Prepared by: {recipe.chef_name}</div>
                 <div className="sub">Recipe Source: {recipe.recipe_source}</div>
+                <UpvoteContainer recipeId={this.props.recipe.id} upvoted={this.props.recipe.upvoted}/>
+                <div>{recipe.upvote_count}</div>
               </div>
 
             <div className="tile-bottom">
+
             </div>
 
             </div>
@@ -55,9 +56,6 @@ class SuggestionIndexItem extends React.Component {
            autoplay="1">
 
            <section className="recipe-show-container">
-             <button onClick={this.closeShowModal}>
-               <i className="fa fa-times" aria-hidden="true"></i>
-             </button>
 
              <section className="recipe-show">
                <figure className="recipe-box">

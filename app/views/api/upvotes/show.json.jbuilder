@@ -1,1 +1,1 @@
-json.extract! @upvote, :user_id, :recipe_id
+json.extract! @upvote, :recipe_id

@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 class Upvote extends React.Component {
   constructor(props) {
     super(props);
+
     this.upvoteRecipe = this.upvoteRecipe.bind(this);
     this.unupvoteRecipe = this.unupvoteRecipe.bind(this);
     this.upvoteOrUnupvoteRecipe = this.upvoteOrUnupvoteRecipe.bind(this);
@@ -12,11 +13,13 @@ class Upvote extends React.Component {
   upvoteRecipe(e) {
     e.preventDefault();
     this.props.createUpvote(this.props.userId, this.props.recipeId);
+    this.setState({upvoted: true})
   }
 
   unupvoteRecipe(e) {
     e.preventDefault();
     this.props.deleteUpvote(this.props.userId, this.props.recipeId);
+    this.setState({upvoted: false})
   }
 
   upvoteOrUnupvoteRecipe() {

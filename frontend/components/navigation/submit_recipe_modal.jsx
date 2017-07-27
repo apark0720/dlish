@@ -16,10 +16,11 @@ const style = {
   },
   content : {
     position        : 'fixed',
-    top             : '75px',
-    left            : '550px',
-    right           : '550px',
-    bottom          : '25px',
+    top             : '10%',
+    left            : '50%',
+    transform       : 'translate(-50%)',
+    // right           : '550px',
+    // bottom          : '25px',
     margin          : 'auto',
     border          : '1px solid #ccc',
     padding         : '15px 30px',
@@ -54,7 +55,7 @@ class SubmitRecipeModal extends React.Component {
        <div>
          <a onClick={this.openModal}>Submit Recipe</a>
 
-         <Modal
+         <Modal className="submit-recipe-modal"
            isOpen={this.state.modalIsOpen}
            onRequestClose={this.closeModal}
            style={style}
