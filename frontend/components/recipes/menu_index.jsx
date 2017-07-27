@@ -9,16 +9,16 @@ class MenuIndex extends React.Component {
   }
 
   selectRecipes() {
-    let activeRecipes = [];
-    this.props.recipes.forEach(recipe => {
+    return this.props.recipes.map(recipe => {
       if (recipe.status === "active") {
-        activeRecipes.push(
+        return (
           <MenuIndexItem
             key={recipe.id}
             recipe={recipe} />);
+      } else {
+        return null;
       }
     });
-    return activeRecipes;
   }
 
   render() {

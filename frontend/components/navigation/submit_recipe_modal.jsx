@@ -59,7 +59,7 @@ class SubmitRecipeModal extends React.Component {
            onRequestClose={this.closeModal}
            style={style}
            contentLabel='modal'>
-           <SubmitRecipeFormContainer modalFunction={this.openModal.bind(this)}/>
+           <SubmitRecipeFormContainer closeModal={this.closeModal.bind(this)}/>
          </Modal>
        </div>
      );

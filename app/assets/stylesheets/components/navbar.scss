@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  z-index: 500;
+  z-index: 9;
   top: 0;
   height: 60px;
   width: 100%;
@@ -61,4 +61,8 @@
 
 img {
 width: 80px;
+}
+
+.error-text {
+  color: red;
 }

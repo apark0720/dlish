@@ -1,25 +1,26 @@
   import React from 'react';
   import { withRouter } from 'react-router';
 
-  const defaultState = (currentUser) => ({
-    creator_id: currentUser.id,
+  const defaultState = {
     title: "",
     description: "",
     url: "",
+    video_id: "",
+    main_image_url: "",
     recipe_source: "",
     category: ""
-  });
+  };
 
   const categories = [
-    "sweet",
-    "savory",
-    "spicy"
+    "Sweet",
+    "Savory",
+    "Spicy"
   ];
 
   class RecipeSubmitForm extends React.Component {
     constructor(props) {
       super(props);
-      this.state = defaultState(this.props.currentUser);
+      this.state = defaultState;
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -28,17 +29,41 @@
      }
 
     update(field) {
-      return e => this.setState({
-         [field]: e.currentTarget.value
-      });
+      return e => {
+        let fieldValue = e.currentTarget.value;
+        if (field === 'url') {
+          const videoUrl = e.currentTarget.value;
+          const startIdx = videoUrl.indexOf("=");
+          const endIdx = videoUrl.lastIndexOf("&");
+          let videoId = "";
+          if (endIdx === -1) {
+            videoId = videoUrl.slice(startIdx+1);
+          } else {
+            videoId = videoUrl.slice(startIdx+1, endIdx);
+          }
+          const mainImageUrlValue = `http://img.youtube.com/vi/${videoId}/0.jpg`;
+
+          this.setState({
+            [field]: fieldValue,
+            ['video_id']: videoId,
+            ['main_image_url']: mainImageUrlValue
+          });
+        } else {
+            this.setState({
+              [field]: fieldValue
+            });
+        }
+      };
     }
 
     handleSubmit(e) {
       e.preventDefault();
 
+
       this.props.createRecipe(this.state)
-        .then(recipe => this.props.history.push(`/suggestions`),
-        err => scroll(0,0));
+        .then(this.props.closeModal)
+        .then(recipe => this.props.history.push('/suggestions'));
+
     }
 
     errors() {
@@ -90,7 +115,7 @@
               </select>
             </div>
 
-            <div><span>Video URL</span>
+            <div><span>Youtube URL</span>
               <input type="text" placeholder="URL" onChange={this.update('url')} value={this.state.url} />
             </div>
 

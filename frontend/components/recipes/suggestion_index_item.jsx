@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'react-modal';
+import ModalVideo from 'react-modal-video';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import style from './modal_style';
@@ -14,7 +14,6 @@ class SuggestionIndexItem extends React.Component {
 
     this.openShowModal = this.openShowModal.bind(this);
     this.closeShowModal = this.closeShowModal.bind(this);
-
   }
 
   openShowModal() {
@@ -27,7 +26,6 @@ class SuggestionIndexItem extends React.Component {
 
   render() {
     const recipe = this.props.recipe;
-
     return (
 
         <div className="recipe-tile">
@@ -49,11 +47,12 @@ class SuggestionIndexItem extends React.Component {
           </a>
 
 
-          <Modal
-           contentLabel="Modal"
+          <ModalVideo
+           channel='youtube'
+           videoId={recipe.video_id}
            isOpen={this.state.modalShowOpen}
-           onRequestClose={this.closeShowModal}
-           style={style}>
+           onClose={this.closeShowModal}
+           autoplay="1">
 
            <section className="recipe-show-container">
              <button onClick={this.closeShowModal}>
@@ -82,11 +81,11 @@ class SuggestionIndexItem extends React.Component {
              </section>
 
            </section>
-         </Modal>
+         </ModalVideo>
         </div>
     );
   }
-};
+}
 
 
 export default SuggestionIndexItem;

@@ -14,7 +14,7 @@ import { clearErrors } from '../../actions/error_actions';
 
 
 const mapStateToProps = state => ({
-  errors: state.session.errors
+  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({

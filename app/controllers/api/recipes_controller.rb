@@ -4,7 +4,7 @@ class Api::RecipesController < ApplicationController
                  Recipe.where(category: params[:category])
                else
                  Recipe.all
-                end
+               end
   end
 
   def search
@@ -18,6 +18,7 @@ class Api::RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.creator_id = current_user.id
 
     if @recipe.save
       render :show
@@ -44,12 +45,7 @@ class Api::RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:title, :description, :url,
-                                   :recipe_source,:creator_id,
-                                   :status, :category)
+    params.require(:recipe).permit(:title, :description, :url, :main_image_url,
+                                   :video_id, :recipe_source, :status, :category)
   end
 end
-#
-# params.require(:recipe).permit(:title, :description, :chef_name, :url,
-#                                :main_image_url, :price, :recipe_source,:creator_id,
-#                                :status, :category, :chef_image_url)
