@@ -1,24 +1,22 @@
-.upvote-button-frame > figure {
-  background-color: red;
-  border: none;
-  cursor: pointer;
-  margin: 8px;
-  width: 24px;
-  height: 24px;
-  display: block;
-  overflow: hidden;
-  text-indent: 110%;
-  white-space: nowrap;
-  background-image: image-url('icons.png');
-  background-repeat: no-repeat;
+.upvote-button-frame  {
+  // margin-left: 40px;
+
+  img {
+    cursor: pointer;
+    width: 60px;
+    display: block;
+    overflow: hidden;
+
+    white-space: nowrap;
+    background-repeat: no-repeat;
+  }
 }
 
+
 .upvote-button {
-  background-position: -26px -322px;
 }
 
 .unupvote-button {
-  background-position: 0px -322px;
 }
 
 .upvote-count {

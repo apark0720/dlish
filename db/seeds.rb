@@ -26,7 +26,7 @@ recipe1 = Recipe.create!(title: 'Char Siu Pork Buns', description: 'Chinese Styl
                          main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500954706/recipe1_vbyjcs.jpg',
                          price: 10, recipe_source: 'Food Wishes', status: "pending", category: "Savory", chef_image_url: kahn, creator_id: 1)
 
-recipe2 = Recipe.create!(title: 'Spicy Korean Rice Cake with Cheese', description: 'Yum', chef_name: 'Chef Una Kim',
+recipe2 = Recipe.create!(title: 'Spicy Korean Rice Cakes with Cheese', description: 'Yum', chef_name: 'Chef Una Kim',
                          url: 'https://www.youtube.com/watch?v=zk6U6vblLUg', video_id: "zk6U6vblLUg",
                          main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500954701/recipie2_an9ckp.jpg',
                          price: 12, recipe_source: 'Food N Table', status: "pending", category: "Spicy", chef_image_url: kim, creator_id: 1)

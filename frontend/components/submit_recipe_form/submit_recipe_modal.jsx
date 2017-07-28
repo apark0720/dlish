@@ -38,6 +38,7 @@ class SubmitRecipeModal extends React.Component {
 
      this.openModal = this.openModal.bind(this);
      this.closeModal = this.closeModal.bind(this);
+     this.handleClick = this.handleClick.bind(this);
    }
 
    openModal() {
@@ -50,10 +51,20 @@ class SubmitRecipeModal extends React.Component {
      this.setState({ modalIsOpen: false });
    }
 
+   handleClick(e) {
+     e.preventDefault();
+
+     if (this.props.currentUser) {
+       this.openModal();
+     } else {
+       this.props.openLoginModal(e);
+     }
+   }
+
    render() {
      return (
        <div>
-         <a onClick={this.openModal}>Submit Recipe</a>
+         <a onClick={this.handleClick}>Submit Recipe</a>
 
          <Modal className="submit-recipe-modal"
            isOpen={this.state.modalIsOpen}

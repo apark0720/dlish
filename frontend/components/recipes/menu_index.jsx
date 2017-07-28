@@ -30,11 +30,11 @@ class MenuIndex extends React.Component {
         <h1 className="all-header">This Week's Menu</h1>
         <div className="recipes">
           <div className="allrecipes-text">
-            <span>Showing results in:</span>
+            <span>Showing results in:  </span>
             <span className="allrecipes-span">98144</span>
           </div>
           <div className="recipe-list">
-          {activeRecipes}
+            {activeRecipes}
           </div>
         </div>
       </div>

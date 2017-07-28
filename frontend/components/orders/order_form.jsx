@@ -36,15 +36,14 @@ class OrderForm extends React.Component {
       this.setState({
         [field]: e.currentTarget.value
       });
-    }
+    };
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const order = this.state;
     this.props.createOrder(order)
-      .then(this.props.closeModal)
-      .then(recipe => this.props.history.push('/menu'));
+      .then(this.props.closePane);
   }
 
   errors() {

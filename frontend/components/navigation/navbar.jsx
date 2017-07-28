@@ -62,7 +62,7 @@ class Navbar extends React.Component {
               </Link>
             </li>
             <li>
-              <SubmitRecipeModal/>
+              <SubmitRecipeModal openLoginModal={this.handleLoginClick} currentUser={this.props.currentUser}/>
             </li>
           </ul>
         </menu>

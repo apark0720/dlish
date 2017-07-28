@@ -27,60 +27,32 @@ class SuggestionIndexItem extends React.Component {
     const recipe = this.props.recipe;
     return (
 
-        <div className="recipe-tile">
+      <div className="recipe-tile">
+        <a className="tile-link" >
+            <img className="tile-img" src={recipe.main_image_url} onClick={this.openShowModal}/>
 
-          <a className="tile-link" >
-              <img className="tile-img" src={recipe.main_image_url} onClick={this.openShowModal}/>
-
-            <div className="tile-info">
-              <div>
-                <div className="tile-title-tagline">{recipe.title}</div>
-                <div className="sub">Recipe Source: {recipe.recipe_source}</div>
-                <UpvoteContainer recipeId={this.props.recipe.id} upvoted={this.props.recipe.upvoted}/>
-                <div>{recipe.upvote_count}</div>
+          <div className="tile-info">
+            <div className="tile-title-tagline">
+              <div className='tile-title'>
+                <h3>{recipe.title}</h3>
+                <p className='sub'>Recipe Source: {recipe.recipe_source}</p>
               </div>
-
-            <div className="tile-bottom">
-
+              <div className='tile-vote'>
+                <UpvoteContainer recipeId={this.props.recipe.id} upvoted={this.props.recipe.upvoted}/>
+                {recipe.upvote_count}
+              </div>
             </div>
+          </div>
+        </a>
 
-            </div>
-          </a>
-
-
-          <ModalVideo
-           channel='youtube'
-           videoId={recipe.video_id}
-           isOpen={this.state.modalShowOpen}
-           onClose={this.closeShowModal}
-           autoplay="1">
-
-           <section className="recipe-show-container">
-
-             <section className="recipe-show">
-               <figure className="recipe-box">
-                 <img src={recipe.main_image_url} />
-               </figure>
-
-               <aside className="recipe-info">
-                 <header className="recipe-user-info">
-                   <img src={recipe.chef_image_url}/>
-                   <div className="username">
-                     <h1>{recipe.chef_name}</h1>
-                   </div>
-                 </header>
-
-                 <figcaption className="recipe-details">
-                   <h2>{recipe.title}</h2>
-                   <br/>
-                   <p>{recipe.description}</p>
-                 </figcaption>
-               </aside>
-             </section>
-
-           </section>
-         </ModalVideo>
-        </div>
+        <ModalVideo
+         channel='youtube'
+         videoId={recipe.video_id}
+         isOpen={this.state.modalShowOpen}
+         onClose={this.closeShowModal}
+         autoplay="1">
+        </ModalVideo>
+      </div>
     );
   }
 }

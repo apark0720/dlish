@@ -14,14 +14,13 @@ class SuggestionIndex extends React.Component {
   }
 
   selectRecipes(flavor) {
-    console.log(flavor);
     let selected = this.props.recipes;
-    // console.log(selected);
-    if (flavor === 'Savory' || 'Spicy' || 'Sweet') {
+
+    if (flavor === ('Savory' || 'Spicy' || 'Sweet')) {
       selected = this.props.recipes.filter(recipe => (recipe.category === flavor));
     }
     selected.sort((a, b) => (b.upvote_count - a.upvote_count));
-    console.log(selected);
+
     return selected.map(recipe => {
       if (recipe.status === "pending") {
         return (
@@ -48,24 +47,24 @@ class SuggestionIndex extends React.Component {
       <div className="allrecipes-scope">
         <h1 className="all-header">Vote for Next Week's Menu</h1>
         <div className="recipes">
-
-
-          <span>Showing results in:</span>
-          <span className="allrecipes-span">98144</span>
-
-            <div className="allrecipes-text"><span>Flavor Filter: </span>
-              <select onChange={this.setFilter('filter')} >
-                <option selected disabled>All Flavors</option>
-                <option value="Savory">Savory</option>
-                <option value="Spicy">Spicy</option>
-                <option value="Sweet">Sweet</option>
-              </select>
-            </div>
-
+          <div>
+            <span>Showing results in:  </span>
+            <span className="allrecipes-span">98144</span>
           </div>
-          <div className="recipe-list">
-            {this.selectRecipes(this.state.filter)}
+
+          <div className="allrecipes-text"><span>Filter: </span>
+            <select onChange={this.setFilter('filter')} >
+              <option value="" selected>All Flavors</option>
+              <option value="Savory">Savory</option>
+              <option value="Spicy">Spicy</option>
+              <option value="Sweet">Sweet</option>
+            </select>
           </div>
+
+        </div>
+        <div className="recipe-list">
+          {this.selectRecipes(this.state.filter)}
+        </div>
       </div>
     );
 
