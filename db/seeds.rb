@@ -39,7 +39,7 @@ recipe3 = Recipe.create!(title: 'American French Onion Soup', description: 'Yum'
 recipe4 = Recipe.create!(title: 'Strawberry Daifuku Mochi', description: 'Yum', chef_name: 'Chef Hideaki Taneda',
                          url: 'https://www.youtube.com/watch?v=cdtCAasUwsI', video_id: "cdtCAasUwsI",
                          main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500946268/recipe4_ltwufw.jpg',
-                         price: 6, recipe_source: 'Daily Cook', status: "active", category: "Sweet", chef_image_url: taneda, creator_id: 1)
+                         price: 6, recipe_source: 'Daily Cook', status: "pending", category: "Sweet", chef_image_url: taneda, creator_id: 1)
 
 recipe5 = Recipe.create!(title: 'Strawberry Oreo Parfait', description: 'Yum', chef_name: 'Chef Ethan Stowell',
                          url: 'https://www.youtube.com/watch?v=wZ5-sfl28jk', video_id: "wZ5-sfl28jk",

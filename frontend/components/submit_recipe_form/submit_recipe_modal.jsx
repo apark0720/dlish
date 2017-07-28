@@ -22,9 +22,8 @@ const style = {
     // right           : '550px',
     // bottom          : '25px',
     margin          : 'auto',
-    border          : '1px solid #ccc',
     padding         : '15px 30px',
-    backgroundColor : '#FAF6E8',
+    backgroundColor : '#FFFF',
     zIndex          : 11
   }
 };

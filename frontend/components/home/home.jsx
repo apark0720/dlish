@@ -10,7 +10,9 @@ const Home = () => (
           <video loop autoPlay>
             <source src="http://res.cloudinary.com/apark0720/video/upload/v1500767920/dlishbanner_ylseil.mp4" type="video/mp4" />
           </video>
-          <h1>Any recipe in the world, <br/> prepared by the best chefs in Seattle.</h1>
+          <div className="white-banner">
+            <h1>Any recipe in the world, <br/> prepared by the best chefs in Seattle.</h1>
+          </div>
         </div>
       </div>
 

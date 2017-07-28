@@ -19,7 +19,7 @@ const style = {
     bottom          : '20%',
     transform       : 'translate(-70%)',
     margin          : 'auto',
-    // border          : '1px solid #ccc',
+    width           : '835px',
     padding         : '20px',
     zIndex          : 11
   }

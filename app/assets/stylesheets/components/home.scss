@@ -33,7 +33,7 @@
 
 .homepage-info-1 h2 {
   font-family: $heading;
-  color: $gray;
+  color: $dark-gray;
   font-size: 30px;
 }
 
@@ -86,19 +86,24 @@
     opacity: 0.6;
 }
 
+.white-banner {
+  color: $dark-gray;
+  background:rgba(255,255,255, 0.6);
+  text-align: center;
+  // margin-top: 4.5%;
+  // padding-top: 85px;
+  // padding-bottom: 85px;
+  padding-top: 6.6%;
+  padding-bottom: 6.6%;
+  height: 255px;
+}
+
 .homepage-video h1 {
-    color: $dark-gray;
-    background:rgba(255,255,255, 0.6);
     font-family: $banner;
+    width: 50%;
+    margin: 0 auto;
     font-size: 76px;
     font-weight: 700;
-    text-align: center;
-    // margin-top: 4.5%;
-    // padding-top: 85px;
-    // padding-bottom: 85px;
-    padding-top: 6.6%;
-    padding-bottom: 6.6%;
-    height: 255px;
 }
 
 

@@ -60,6 +60,7 @@
 }
 
 .tile-img {
+  border-radius: 25px;
   object-fit: cover;
   display: block;
   height: 273px;
@@ -81,6 +82,7 @@
 
 .tile-link {
   display: block;
+  border-radius: 25px;
   background: white;
   border: 2px solid;
   text-decoration: none;
@@ -189,12 +191,12 @@
 
   position        : fixed;
   top             : 110px;
-  left            : 110px;
   right           : 400px;
   bottom          : 110px;
+  width:            360px  
 }
 
-.recipe-box img {
+.recipe-box iframe {
   object-fit: contain;
 
   height: 100%;

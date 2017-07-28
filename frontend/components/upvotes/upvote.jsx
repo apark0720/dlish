@@ -12,13 +12,13 @@ class Upvote extends React.Component {
 
   upvoteRecipe(e) {
     e.preventDefault();
-    this.props.createUpvote(this.props.userId, this.props.recipeId);
+    this.props.createUpvote(this.props.currentUser.id, this.props.recipeId);
     this.setState({upvoted: true});
   }
 
   unupvoteRecipe(e) {
     e.preventDefault();
-    this.props.deleteUpvote(this.props.userId, this.props.recipeId);
+    this.props.deleteUpvote(this.props.currentUser.id, this.props.recipeId);
     this.setState({upvoted: false});
   }
 

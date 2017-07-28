@@ -4,7 +4,7 @@ import Upvote from './upvote';
 
 const mapStateToProps = state => {
   return {
-    userId: state.session.currentUser.id
+    currentUser: state.session.currentUser
   };
 };
 

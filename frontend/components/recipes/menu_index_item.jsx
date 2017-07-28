@@ -31,21 +31,22 @@ class MenuIndexItem extends React.Component {
 
     return (
         <div className="recipe-tile">
-          <a className="tile-link" onClick={this.openShowModal}>
-              <img className="tile-img" src={recipe.main_image_url}/>
+          <a className="tile-link" >
+              <img className="tile-img" src={recipe.main_image_url} onClick={this.openShowModal}/>
 
             <div className="tile-info">
-              <div>
-                <div className="tile-title-tagline">{recipe.title}</div>
-                <div className="sub">Prepared by: {recipe.chef_name}</div>
-                <div className="sub">Recipe Source: {recipe.recipe_source}</div>
+              <div className="tile-title-tagline">
+                <div className='tile-title'>
+                  <h3>{recipe.title}</h3>
+                  <p className='sub'>Prepared by: {recipe.chef_name}</p>
+                </div>
+                <div className='tile-price'>
+                  ${recipe.price}
+                </div>
               </div>
-
-            <div className="tile-bottom">
-            </div>
-
             </div>
           </a>
+
 
           <Modal
            contentLabel="Modal"
@@ -57,7 +58,7 @@ class MenuIndexItem extends React.Component {
 
              <section className="recipe-show">
                <figure className="recipe-box">
-                 <img src={recipe.main_image_url} />
+                 <iframe src={`https://www.youtube.com/embed/${recipe.video_id}?autoplay=1`} frameborder="0" allowfullscreen></iframe>
                </figure>
 
                <aside className="recipe-info">

@@ -1,6 +1,7 @@
 .recipe-create-form {
   opacity: 0.9;
   padding: 40px 0;
+  height: 700px;
 }
 
 .create-header {
@@ -15,9 +16,6 @@
   font-weight: bold;
 }
 
-.recipe-create-form > * {
-  margin: 0 20%;
-}
 
 .create-form-contents {
   font-family: $heading;
@@ -25,7 +23,8 @@
   margin-top: 25px;
   display: flex;
   flex-direction: column;
-  background-color: $secondary;
+  background-color: white;
+  width: 370px;
 }
 
 .create-form-contents div {
@@ -58,7 +57,7 @@
 .create-form-contents select {
   width: 75%;
   color: $dark-gray;
-  background-color: $background;
+  background-color: white;
 }
 
 .create-form-contents input[type="submit"] {
