@@ -5,8 +5,6 @@ import {
 } from '../actions/recipe_actions';
 
 import { RECEIVE_UPVOTE, REMOVE_UPVOTE } from '../actions/upvote_actions';
-
-
 import merge from 'lodash/merge';
 
 const RecipeReducer = (state = {}, action) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 
-import SubmitRecipeFormContainer from '../submit_recipe_form/submit_recipe_form_container';
+import SubmitRecipeFormContainer from './submit_recipe_form_container';
 
 const style = {
   overlay : {

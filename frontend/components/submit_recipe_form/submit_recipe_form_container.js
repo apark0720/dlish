@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createRecipe } from '../../actions/recipe_actions';
-import SubmitRecipeForm from './submit_recipe_form';
+import RecipeSubmitForm from './submit_recipe_form';
 import { receiveErrors, clearErrors } from '../../actions/error_actions';
 
 const mapStateToProps = ({ session, errors}) => ({
@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
   clearErrors: () => dispatch(clearErrors([]))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SubmitRecipeForm);
+export default connect(mapStateToProps, mapDispatchToProps)(RecipeSubmitForm);

@@ -17,7 +17,7 @@
     "Spicy"
   ];
 
-  class RecipeSubmitForm extends React.Component {
+  class SubmitRecipeForm extends React.Component {
     constructor(props) {
       super(props);
       this.state = defaultState;
@@ -105,11 +105,11 @@
             </div>
 
             <div><span>Category</span>
-              <select name="expertise" onChange={this.update('category')} value={this.state.category} >
-                <option value="x" selected disabled>Select a category</option>
+              <select name="expertise" onChange={this.update('category')} >
+                <option selected disabled>Select a category</option>
                 {
-                  categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
+                  categories.map((category, idx) => (
+                    <option key={idx} value={category}>{category}</option>
                   ))
                 }
               </select>
@@ -134,4 +134,4 @@
     }
   }
 
-  export default withRouter(RecipeSubmitForm);
+  export default withRouter(SubmitRecipeForm);

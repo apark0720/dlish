@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import style from './modal_style';
+import OrderFormPane from '../orders/order_form_pane';
 
 class MenuIndexItem extends React.Component {
   constructor(props) {
@@ -53,9 +54,6 @@ class MenuIndexItem extends React.Component {
            style={style}>
 
            <section className="recipe-show-container">
-             <button onClick={this.closeShowModal}>
-               <i className="fa fa-times" aria-hidden="true"></i>
-             </button>
 
              <section className="recipe-show">
                <figure className="recipe-box">
@@ -74,6 +72,7 @@ class MenuIndexItem extends React.Component {
                    <h2>{recipe.title}</h2>
                    <br/>
                    <p>{recipe.description}</p>
+                   <OrderFormPane recipeId={recipe.id} closeShowModal={this.closeShowModal}/>
                  </figcaption>
                </aside>
              </section>

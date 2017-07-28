@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createOrder } from '../../actions/order_actions';
-import OrderForm from './orderform';
+import OrderForm from './order_form';
 import { receiveErrors, clearErrors } from '../../actions/error_actions';
 
 const mapStateToProps = ({ session, errors}) => ({
@@ -9,7 +9,7 @@ const mapStateToProps = ({ session, errors}) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  createOrder: recipe => dispatch(createOrder(order)),
+  createOrder: order => dispatch(createOrder(order)),
   clearErrors: () => dispatch(clearErrors([]))
 });
 

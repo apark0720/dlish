@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import SubmitRecipeModal from './submit_recipe_modal';
+import SubmitRecipeModal from '../submit_recipe_form/submit_recipe_modal';
 
 class Navbar extends React.Component {
   constructor(props) {
