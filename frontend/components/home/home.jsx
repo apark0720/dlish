@@ -7,11 +7,8 @@ const Home = () => (
     <div>
       <div className="homepage-video">
         <video loop autoPlay>
-          <source src="http://res.cloudinary.com/apark0720/video/upload/v1500767920/dlishbanner_ylseil.mp4" type="video/mp4" />
+          <source src="http://res.cloudinary.com/apark0720/video/upload/v1501543726/dlishbanner.mp4" type="video/mp4" />
         </video>
-        <div className="white-banner">
-          <h1>Any recipe in the world, <br/> prepared by the best chefs in Seattle.</h1>
-        </div>
       </div>
     </div>
 
