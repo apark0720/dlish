@@ -4,49 +4,21 @@
   background-color: $secondary;
   border-top: 3px solid $orange;
   display: flex;
-  justify-content: space-around;
-  font-family: $text;
-}
-
-.foot-left {
-  display: flex;
   flex-direction: column;
-  margin: 10px;
+  font-family: $text;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
 }
 
-.foot-right {
+.footer-icons {
   display: flex;
-  flex-direction: row;
-  padding: 30px;
+  margin-bottom: 10px;
 }
 
 .icon{
   height: 32px;
   width: 32px;
   margin: 7px;
-  padding-top: 15px;
-}
-
-.email-icon {
-  height: 32px;
-  width: 32px;
-  margin: 7px;
-  padding-top: 20px;
-}
-
-.foot-left {
-  width: 500px
-}
-
-.foot-left h1,
-.foot-left p {
-  margin: 10px;
-}
-
-.foot-left h1 {
-  text-transform: uppercase;
-}
-
-.foot-left p {
-  font-size: 14px;
+  margin-right: 15px;
 }

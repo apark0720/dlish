@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const Footer = (props) => (
   <footer className="footer">
-    <section className="foot-left">
-      <h1>About</h1>
-      <p>dlish is a web application inspired by lishfood.com, <br/> that delivers delicious chef-prepared meals to your office. </p>
+    <section className="footer-icons">
+      <a href="https://github.com/apark0720" target="_new">
+        <img className="icon" src={ window.images.github_icon }/>
+      </a>
+      <a href="mailto:apark0720@gmail.com" target="_new">
+        <img className="icon" src={ window.images.email_icon }/>
+      </a>
     </section>
-    <section className="foot-right">
-      <img className="icon" src={ window.images.github_icon }/>
-      <img className="icon" src={ window.images.linkedin_icon }/>
-      <img className="email-icon" src={ window.images.email_icon }/>
-    </section>
+    <p><b>dlish</b> is a web application inspired by <a href="https://lishfood.com">lishfood.com,</a><br/>that delivers delicious chef-prepared meals to your office</p>
   </footer>
 );
 
