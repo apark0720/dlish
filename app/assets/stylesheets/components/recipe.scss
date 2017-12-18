@@ -4,6 +4,7 @@
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  min-height: 75vh;
 }
 
 @media (min-width: 1280px) {
@@ -17,6 +18,7 @@
 .recipe-list {
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .all-header {
@@ -26,7 +28,7 @@
   font-weight: normal;
   line-height: 50px;
   margin-top: 130px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -60,7 +62,8 @@
 }
 
 .tile-img {
-  border-radius: 25px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   object-fit: cover;
   display: block;
   height: 273px;
@@ -71,7 +74,7 @@
 .recipe-tile {
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   position: relative;
   float: left;
   // width: 21.5%;
@@ -84,23 +87,20 @@
   display: block;
   border-radius: 25px;
   background: white;
-  border: 2px solid;
+  border: 2px solid $light-gray;
   text-decoration: none;
-  color: $light-gray;
 }
 
 .tile-link:hover {
-  border: 3px solid;
-  color: $orange;
+  border: 2px solid $orange;
 
   .tile-title-tagline div:first-of-type {
       text-decoration: underline;
     }
 
-    .progress-bar {
-      background-color: $lime;
-    }
-
+  .progress-bar {
+    background-color: $lime;
+  }
 }
 
 .tile-info {
@@ -265,4 +265,6 @@
 .recipes {
   display: flex;
   justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 29px;
 }

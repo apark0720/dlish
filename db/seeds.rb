@@ -6,11 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(email: 'guest@dlishfood.co', password: '123456')
-User.create!(email: 'apark0720@gmail.com', password: '123456')
-User.create!(email: 'park1013@gmail.com', password: '123456')
-User.create!(email: 'palex@umich.edu', password: '123456')
-User.create!(email: 'ap2903@nyu.edu', password: '123456')
+u1 = User.create!(email: 'guest@dlishfood.co', password: '123456')
+u2 = User.create!(email: 'apark0720@gmail.com', password: '123456')
+u3 = User.create!(email: 'park1013@gmail.com', password: '123456')
+u4 = User.create!(email: 'palex@umich.edu', password: '123456')
+u5 = User.create!(email: 'ap2903@nyu.edu', password: '123456')
+u6 = User.create!(email: 'caykim@umich.edu', password: '123456')
+u7 = User.create!(email: 'njkid93@gmail.com', password: '123456')
+u8 = User.create!(email: 'carolia93@naver.com', password: '123456')
 
 
 kim = 'http://res.cloudinary.com/apark0720/image/upload/v1501016166/una_kim_e7vkxj.png'
@@ -100,3 +103,80 @@ recipe16 = Recipe.create!(title: 'Shakshuka: Eggs Poached in Spicy Tomato Pepper
                           url: 'https://www.youtube.com/watch?v=ifWWRZSWS18', video_id: "ifWWRZSWS18",
                           main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500954605/recipe16_r2ilom.jpg',
                           price: 6, recipe_source: 'Food Wishes', status: "active", category: "Spicy", chef_image_url: niroula, creator_id: 1)
+
+
+Upvote.create!(user_id: u2.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u3.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u4.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u5.id, recipe_id: recipe1.id )
+
+Upvote.create!(user_id: u2.id, recipe_id: recipe2.id )
+Upvote.create!(user_id: u3.id, recipe_id: recipe2.id )
+
+Upvote.create!(user_id: u4.id, recipe_id: recipe3.id )
+Upvote.create!(user_id: u5.id, recipe_id: recipe3.id )
+Upvote.create!(user_id: u6.id, recipe_id: recipe3.id )
+Upvote.create!(user_id: u7.id, recipe_id: recipe3.id )
+
+Upvote.create!(user_id: u5.id, recipe_id: recipe4.id )
+Upvote.create!(user_id: u6.id, recipe_id: recipe4.id )
+Upvote.create!(user_id: u7.id, recipe_id: recipe4.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe4.id )
+
+Upvote.create!(user_id: u2.id, recipe_id: recipe5.id )
+
+Upvote.create!(user_id: u2.id, recipe_id: recipe6.id )
+Upvote.create!(user_id: u3.id, recipe_id: recipe6.id )
+Upvote.create!(user_id: u4.id, recipe_id: recipe6.id )
+Upvote.create!(user_id: u5.id, recipe_id: recipe6.id )
+Upvote.create!(user_id: u7.id, recipe_id: recipe6.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe6.id )
+
+Upvote.create!(user_id: u2.id, recipe_id: recipe7.id )
+Upvote.create!(user_id: u3.id, recipe_id: recipe7.id )
+Upvote.create!(user_id: u4.id, recipe_id: recipe7.id )
+
+Upvote.create!(user_id: u2.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u3.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u4.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u5.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u6.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u7.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe8.id )
+
+Upvote.create!(user_id: u2.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u3.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u4.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u5.id, recipe_id: recipe9.id )
+
+Upvote.create!(user_id: u5.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u6.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u7.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe10.id )
+
+Upvote.create!(user_id: u3.id, recipe_id: recipe11.id )
+Upvote.create!(user_id: u4.id, recipe_id: recipe11.id )
+Upvote.create!(user_id: u5.id, recipe_id: recipe11.id )
+Upvote.create!(user_id: u6.id, recipe_id: recipe11.id )
+Upvote.create!(user_id: u7.id, recipe_id: recipe11.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe11.id )
+
+Upvote.create!(user_id: u8.id, recipe_id: recipe12.id )
+
+Upvote.create!(user_id: u5.id, recipe_id: recipe13.id )
+Upvote.create!(user_id: u6.id, recipe_id: recipe13.id )
+Upvote.create!(user_id: u7.id, recipe_id: recipe13.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe13.id )
+
+Upvote.create!(user_id: u2.id, recipe_id: recipe14.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe14.id )
+
+Upvote.create!(user_id: u3.id, recipe_id: recipe15.id )
+Upvote.create!(user_id: u4.id, recipe_id: recipe15.id )
+Upvote.create!(user_id: u5.id, recipe_id: recipe15.id )
+Upvote.create!(user_id: u6.id, recipe_id: recipe15.id )
+Upvote.create!(user_id: u7.id, recipe_id: recipe15.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe15.id )
+
+Upvote.create!(user_id: u7.id, recipe_id: recipe16.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe16.id )

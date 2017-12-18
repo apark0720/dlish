@@ -38,7 +38,7 @@ class SuggestionIndexItem extends React.Component {
                 <p className='sub'>Recipe Source: {recipe.recipe_source}</p>
               </div>
               <div className='tile-vote'>
-                <UpvoteContainer recipeId={this.props.recipe.id} upvoted={this.props.recipe.upvoted}/>
+                <UpvoteContainer recipeId={recipe.id} upvoted={recipe.upvoted}/>
                 {recipe.upvote_count}
               </div>
             </div>

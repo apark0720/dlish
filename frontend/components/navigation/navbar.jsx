@@ -58,7 +58,7 @@ class Navbar extends React.Component {
           <ul className="row">
             <li>
               <Link to="/suggestions">
-                Menu Suggestions
+                Trending Menus
               </Link>
             </li>
             <li>

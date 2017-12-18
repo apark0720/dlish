@@ -46,13 +46,14 @@ class SuggestionIndex extends React.Component {
     return (
       <div className="allrecipes-scope">
         <h1 className="all-header">Vote for Next Week's Menu</h1>
+        <p style={{ 'textAlign': 'center', 'fontSize': '16px', 'marginBottom': '40px' }}>Click on the <b>image</b> to view the <b>recipe video</b></p>
         <div className="recipes">
           <div>
             <span>Showing results in:  </span>
             <span className="allrecipes-span">98144</span>
           </div>
 
-          <div className="allrecipes-text"><span>Filter: </span>
+          <div className="allrecipes-text"><span>Filter:</span>
             <select onChange={this.setFilter('filter')} >
               <option value="" selected>All Flavors</option>
               <option value="Savory">Savory</option>
@@ -60,8 +61,8 @@ class SuggestionIndex extends React.Component {
               <option value="Sweet">Sweet</option>
             </select>
           </div>
-
         </div>
+
         <div className="recipe-list">
           {this.selectRecipes(this.state.filter)}
         </div>

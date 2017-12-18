@@ -27,11 +27,9 @@ class MenuIndex extends React.Component {
 
     return (
       <div className="allrecipes-scope">
-        <h1 className="all-header">This Week's Menu</h1>
-        <div className="recipes">
-          <div className="recipe-list">
-            {activeRecipes}
-          </div>
+        <h1 className="all-header" style={{ 'margin-bottom': '50px' }}>This Week's Menu</h1>
+        <div className="recipe-list">
+          {activeRecipes}
         </div>
       </div>
     );
