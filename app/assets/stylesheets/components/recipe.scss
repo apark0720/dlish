@@ -167,7 +167,6 @@
   display: flex;
   flex-direction: column;
   font-family: $text;
-
 }
 
 .recipe-show-container button {
@@ -175,7 +174,7 @@
 }
 
 .recipe-show-container button:hover {
-  color: $lime;
+  // background: $lime;
 	cursor: pointer;
 }
 
@@ -188,12 +187,11 @@
 
 .recipe-box {
   margin: 0px;
-
-  position        : fixed;
-  top             : 110px;
-  right           : 400px;
-  bottom          : 110px;
-  width:            360px  
+  position : fixed;
+  top      : 80px;
+  right    : 393px;
+  bottom   : 80px;
+  width    : 420px;  
 }
 
 .recipe-box iframe {
@@ -206,12 +204,13 @@
 
 .recipe-info {
   border-left: 2px solid $light-gray;
-  width: 240px;
-  padding-left: 20px;
+  width: 266px;
+  padding-left: 23px;
+  padding-top: 70px;
   position        : fixed;
-  top             : 110px;
-  right           : 110px;
-  bottom          : 110px;
+  top             : 80px;
+  right           : 60px;
+  bottom          : 80px;
 }
 
 
@@ -245,7 +244,6 @@
   justify-content: center;
 }
 
-.recipe-details,
 .recipe-form-box {
   padding: 10px;
   height: 200px;
@@ -253,6 +251,14 @@
 	flex-direction: column;
   margin: 20px 0px;
   margin-left: 10px;
+}
+
+.recipe-details {
+  padding: 10px;
+  height: 200px;
+	display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .recipe-details h2 {
