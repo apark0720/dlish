@@ -74,7 +74,7 @@ class MenuIndexItem extends React.Component {
 
                 <figcaption className="recipe-details">
                   <h2>{recipe.title}</h2>
-                  <OrderFormPane recipeId={recipe.id} closeShowModal={this.closeShowModal} />
+                  <button>Order Now</button>
                 </figcaption>
               </aside>
             </section>
