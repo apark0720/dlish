@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import HomeActionsContainer from './home_actions_container';
 
@@ -63,7 +64,9 @@ const Home = () => (
         </div>
 
         <div className="order-now">
-          <button>ORDER NOW</button>
+          <Link to={`/menu/`}>
+            <button>ORDER NOW</button>
+          </Link>
         </div>
 
       </div>

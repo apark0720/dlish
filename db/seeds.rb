@@ -14,7 +14,28 @@ u5 = User.create!(email: 'ap2903@nyu.edu', password: '123456')
 u6 = User.create!(email: 'caykim@umich.edu', password: '123456')
 u7 = User.create!(email: 'njkid93@gmail.com', password: '123456')
 u8 = User.create!(email: 'carolia93@naver.com', password: '123456')
-
+u9 = User.create!(email: 'carolia931@naver.com', password: '123456')
+u10 = User.create!(email: 'carolia932@naver.com', password: '123456')
+u11 = User.create!(email: 'carolia933@naver.com', password: '123456')
+u12 = User.create!(email: 'carolia934@naver.com', password: '123456')
+u13 = User.create!(email: 'carolia935@naver.com', password: '123456')
+u14 = User.create!(email: 'carolia936@naver.com', password: '123456')
+u15 = User.create!(email: 'carolia937@naver.com', password: '123456')
+u16 = User.create!(email: 'carolia938@naver.com', password: '123456')
+u17 = User.create!(email: 'carolia939@naver.com', password: '123456')
+u18 = User.create!(email: 'carolia930@naver.com', password: '123456')
+u19 = User.create!(email: 'carolia9311@naver.com', password: '123456')
+u20 = User.create!(email: 'carolia9312@naver.com', password: '123456')
+u21 = User.create!(email: 'carolia9313@naver.com', password: '123456')
+u22 = User.create!(email: 'carolia93@14naver.com', password: '123456')
+u23 = User.create!(email: 'carolia9315@naver.com', password: '123456')
+u24 = User.create!(email: 'carolia931234@naver.com', password: '123456')
+u25 = User.create!(email: 'carolia93@na234ver.com', password: '123456')
+u26 = User.create!(email: 'carolia93@naver234.com', password: '123456')
+u27 = User.create!(email: 'carolia93@naver.234com', password: '123456')
+u28 = User.create!(email: 'carolia93@naver.com234', password: '123456')
+u29 = User.create!(email: 'carolia93@naver.co23m', password: '123456')
+u30 = User.create!(email: 'carolia93@naver.co33m', password: '123456')
 
 kim = 'http://res.cloudinary.com/apark0720/image/upload/v1501016166/una_kim_e7vkxj.png'
 stowell = 'http://res.cloudinary.com/apark0720/image/upload/v1501016168/ethan_stowell_oqsizf.png'
@@ -34,7 +55,7 @@ recipe2 = Recipe.create!(title: 'Spicy Korean Rice Cakes with Cheese', descripti
                          main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500954701/recipie2_an9ckp.jpg',
                          price: 12, recipe_source: 'Food N Table', status: "pending", category: "Spicy", chef_image_url: kim, creator_id: 1)
 
-recipe3 = Recipe.create!(title: 'American French Onion Soup', description: 'Yum', chef_name: 'Chef Ethan Stowell',
+recipe3 = Recipe.create!(title: 'Classic French Onion Soup', description: 'Yum', chef_name: 'Chef Ethan Stowell',
                          url: 'https://www.youtube.com/watch?v=Ptauy20rLjg', video_id: "Ptauy20rLjg",
                          main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500954707/recipe3_jytqpi.jpg',
                          price: 8, recipe_source: 'Food Wishes', status: "pending", category: "Savory", chef_image_url: stowell, creator_id: 1)
@@ -77,12 +98,12 @@ recipe10 = Recipe.create!(title: 'Japanese Curry Udon', description: 'Yum', chef
 recipe11 = Recipe.create!(title: 'Sausage & Shrimp Paella', description: 'Yum', chef_name: 'Chef Shimi Kahn',
                           url: 'https://www.youtube.com/watch?v=tiJMJznAi0Y', video_id: "tiJMJznAi0Y",
                           main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500946423/recipe11_zkwfo4.jpg',
-                          price: 6, recipe_source: 'Food Wishes', status: "active", category: "Savory", chef_image_url: kahn, creator_id: 1)
+                          price: 12, recipe_source: 'Food Wishes', status: "active", category: "Savory", chef_image_url: kahn, creator_id: 1)
 
 recipe12 = Recipe.create!(title: 'Gochujang Baby Back Ribs with Cheese Fondue', description: 'Yum', chef_name: 'Chefs Shane & Garrett',
                           url: 'https://www.youtube.com/watch?v=XyUKev03188', video_id: "XyUKev03188",
                           main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500954703/recipe12_vjgicl.jpg',
-                          price: 6, recipe_source: 'Food N Table', status: "active", category: "Spicy", chef_image_url: shane, creator_id: 1)
+                          price: 14, recipe_source: 'Food N Table', status: "active", category: "Spicy", chef_image_url: shane, creator_id: 1)
 
 recipe13 = Recipe.create!(title: 'Creamy Sweet Pumpkin Pasta', description: 'Yum', chef_name: 'Chef Prakash Niroula',
                           url: 'https://www.youtube.com/watch?v=zSU3DQVPLDE', video_id: "zSU3DQVPLDE",
@@ -102,13 +123,32 @@ recipe15 = Recipe.create!(title: 'Gyudon: Steak Rice Bowl', description: 'Yum', 
 recipe16 = Recipe.create!(title: 'Shakshuka: Eggs Poached in Spicy Tomato Pepper Sauce', description: 'Yum', chef_name: 'Chef Prakash Niroula',
                           url: 'https://www.youtube.com/watch?v=ifWWRZSWS18', video_id: "ifWWRZSWS18",
                           main_image_url: 'http://res.cloudinary.com/apark0720/image/upload/v1500954605/recipe16_r2ilom.jpg',
-                          price: 6, recipe_source: 'Food Wishes', status: "active", category: "Spicy", chef_image_url: niroula, creator_id: 1)
+                          price: 9, recipe_source: 'Food Wishes', status: "active", category: "Spicy", chef_image_url: niroula, creator_id: 1)
 
 
 Upvote.create!(user_id: u2.id, recipe_id: recipe1.id )
 Upvote.create!(user_id: u3.id, recipe_id: recipe1.id )
 Upvote.create!(user_id: u4.id, recipe_id: recipe1.id )
 Upvote.create!(user_id: u5.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u6.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u7.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u9.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u10.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u11.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u12.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u13.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u14.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u15.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u16.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u17.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u18.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u19.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u20.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u21.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u22.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u23.id, recipe_id: recipe1.id )
+Upvote.create!(user_id: u24.id, recipe_id: recipe1.id )
 
 Upvote.create!(user_id: u2.id, recipe_id: recipe2.id )
 Upvote.create!(user_id: u3.id, recipe_id: recipe2.id )
@@ -142,17 +182,57 @@ Upvote.create!(user_id: u4.id, recipe_id: recipe8.id )
 Upvote.create!(user_id: u5.id, recipe_id: recipe8.id )
 Upvote.create!(user_id: u6.id, recipe_id: recipe8.id )
 Upvote.create!(user_id: u7.id, recipe_id: recipe8.id )
-Upvote.create!(user_id: u8.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u9.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u10.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u11.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u12.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u13.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u14.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u15.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u16.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u17.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u18.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u19.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u20.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u21.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u22.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u23.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u24.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u25.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u26.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u27.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u28.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u29.id, recipe_id: recipe8.id )
+Upvote.create!(user_id: u30.id, recipe_id: recipe8.id )
 
 Upvote.create!(user_id: u2.id, recipe_id: recipe9.id )
 Upvote.create!(user_id: u3.id, recipe_id: recipe9.id )
 Upvote.create!(user_id: u4.id, recipe_id: recipe9.id )
 Upvote.create!(user_id: u5.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u6.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u7.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u8.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u9.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u10.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u11.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u12.id, recipe_id: recipe9.id )
+Upvote.create!(user_id: u13.id, recipe_id: recipe9.id )
 
 Upvote.create!(user_id: u5.id, recipe_id: recipe10.id )
 Upvote.create!(user_id: u6.id, recipe_id: recipe10.id )
 Upvote.create!(user_id: u7.id, recipe_id: recipe10.id )
 Upvote.create!(user_id: u8.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u9.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u10.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u11.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u12.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u13.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u14.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u15.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u16.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u17.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u18.id, recipe_id: recipe10.id )
+Upvote.create!(user_id: u19.id, recipe_id: recipe10.id )
 
 Upvote.create!(user_id: u3.id, recipe_id: recipe11.id )
 Upvote.create!(user_id: u4.id, recipe_id: recipe11.id )
