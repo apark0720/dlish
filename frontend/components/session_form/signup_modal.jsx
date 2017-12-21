@@ -101,9 +101,9 @@ class SignupModal extends React.Component {
         <hr />
         <button
           onClick={ this.handleSubmit }
-          className={ !this.submitReady() ? 'disabled' : '' }
-        >Sign Up</button>
-        <button type="button" onClick={ this.handleGuestLogin }>Guest</button>
+          className={ !this.submitReady() ? 'disabled' : '' }>
+          Sign Up
+        </button>
         <a onClick={ this.switchModal }>
           <small>Already signed up? Log in instead.</small>
         </a>
